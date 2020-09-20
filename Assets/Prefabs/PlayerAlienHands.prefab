@@ -1398,8 +1398,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5606842961461728809}
   - component: {fileID: 5606842961472747301}
+  - component: {fileID: 2001019773882491542}
+  - component: {fileID: 1569254257}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerAlienHands
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1454,6 +1456,41 @@ MonoBehaviour:
     actionPath: /actions/default/in/HeadsetOnHead
     needsReinit: 1
   allowToggleTo2D: 1
+--- !u!114 &2001019773882491542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606842961461782097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27991c206a5e66147bb8ee3ef31c8bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionSet:
+    actionSetPath: /actions/monster
+  forSources: 0
+  disableAllOtherActionSets: 0
+  activateOnStart: 1
+  deactivateOnDestroy: 1
+--- !u!114 &1569254257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606842961461782097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f59eb9aa0e65cf41aac1ffb2f3ebef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walk:
+    actionPath: /actions/monster/in/MovementAxis
+    needsReinit: 0
+  handType: 2
+  walkSpeed: 2
 --- !u!1 &5606842961461782937
 GameObject:
   m_ObjectHideFlags: 0
