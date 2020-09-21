@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - skyscraper
+  - house
+  - hand
   layers:
   - Default
   - TransparentFX
