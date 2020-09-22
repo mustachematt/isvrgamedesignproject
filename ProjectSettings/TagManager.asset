@@ -9,6 +9,8 @@ TagManager:
   - skyscraper
   - house
   - hand
+  - gas station
+  - building
   layers:
   - Default
   - TransparentFX

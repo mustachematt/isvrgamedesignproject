@@ -5,19 +5,17 @@ using UnityEngine;
 public class EffectDespawn : MonoBehaviour
 {
 
-    int timeleft;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        timeleft = 30;
-    }
+    public float despawnTime;
 
     // Update is called once per frame
     void Update()
     {
-        timeleft--;
-        if (timeleft <= 0)
-            Destroy(gameObject);
+        StartCoroutine(RemoveEffect());
+    }
+
+    IEnumerator RemoveEffect()
+    {
+        yield return new WaitForSeconds(despawnTime);
+        Destroy(gameObject);
     }
 }
