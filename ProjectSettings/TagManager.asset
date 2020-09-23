@@ -6,6 +6,11 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
+  - skyscraper
+  - house
+  - hand
+  - gas station
+  - building
   layers:
   - Default
   - TransparentFX
