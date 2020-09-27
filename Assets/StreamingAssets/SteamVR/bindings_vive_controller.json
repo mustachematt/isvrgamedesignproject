@@ -196,8 +196,18 @@
                "path" : "/user/hand/right/input/trigger"
             },
             {
-               "inputs" : {},
-               "mode" : "none",
+               "inputs" : {
+                  "east" : {
+                     "output" : "/actions/default/in/snapturnright"
+                  },
+                  "west" : {
+                     "output" : "/actions/default/in/snapturnleft"
+                  }
+               },
+               "mode" : "dpad",
+               "parameters" : {
+                  "sub_mode" : "click"
+               },
                "path" : "/user/hand/left/input/trackpad"
             },
             {
@@ -208,11 +218,15 @@
          ]
       },
       "/actions/monster" : {
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {
                   "position" : {
-                     "output" : "/actions/monster/in/movementaxis"
+                     "output" : "/actions/monster/in/turnaxis"
                   }
                },
                "mode" : "trackpad",
