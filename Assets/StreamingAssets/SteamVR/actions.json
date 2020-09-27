@@ -81,6 +81,10 @@
     {
       "name": "/actions/monster/in/MovementAxis",
       "type": "vector2"
+    },
+    {
+      "name": "/actions/monster/in/TurnAxis",
+      "type": "vector2"
     }
   ],
   "action_sets": [
@@ -173,7 +177,8 @@
       "/actions/platformer/in/Jump": "Jump",
       "/actions/default/in/SnapTurnLeft": "Snap Turn (Left)",
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
-      "/actions/monster/in/MovementAxis": "Walk"
+      "/actions/monster/in/MovementAxis": "Walk",
+      "/actions/monster/in/TurnAxis": "Turn"
     }
   ]
 }

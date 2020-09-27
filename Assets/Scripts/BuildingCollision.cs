@@ -11,7 +11,7 @@ public class BuildingCollision : MonoBehaviour
     Vector3 originPosition;
     Vector3 fireLocation;
 
-    public float shakeSpeed;
+    public float shakeSpeed; 
     public float shakeIntensity;
     public float shakeRange;
 
@@ -23,7 +23,7 @@ public class BuildingCollision : MonoBehaviour
     public int destructionNum;
 
 
-    //public bool buildingHit = false;
+    public bool buildingHit = false;
     public bool isShaking = false;
     public bool fireOn = false;
 
@@ -58,7 +58,7 @@ public class BuildingCollision : MonoBehaviour
                 if (tempSinkDistance <= 0)
                 {
                     isShaking = false;
-                    //buildingHit = false;
+                    buildingHit = false;
                     hitCount++;
                     tempSinkDistance = sinkDistance;
                 }
@@ -68,15 +68,12 @@ public class BuildingCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider hand)
     {
-        if(hand.tag == "hand")
+        if (hand.tag == "hand")
         {
-            if(gameObject.tag == "skyscraper" || gameObject.tag == "building")
+            if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
             {
-                //if(buildingHit == false)
-                //{
-                    SkyscraperHit(hand.transform.position);
-                //}
-                
+                if(buildingHit == false)
+                SkyscraperHit(hand.transform.position);
             }
             else if (gameObject.tag == "house")
             {
@@ -89,7 +86,7 @@ public class BuildingCollision : MonoBehaviour
     void SkyscraperHit(Vector3 handPosition)
     {
         int fireSpawnChance = Random.Range(0, 5);
-        //buildingHit = true;
+        buildingHit = true;
         isShaking = true;
 
         originPosition = transform.position;

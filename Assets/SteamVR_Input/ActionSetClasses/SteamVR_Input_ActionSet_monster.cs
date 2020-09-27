@@ -24,5 +24,13 @@ namespace Valve.VR
                 return SteamVR_Actions.monster_MovementAxis;
             }
         }
+        
+        public virtual SteamVR_Action_Vector2 TurnAxis
+        {
+            get
+            {
+                return SteamVR_Actions.monster_TurnAxis;
+            }
+        }
     }
 }
