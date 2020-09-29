@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BuildingCollision : MonoBehaviour
 {
+    public Velocity velocityCheck1;
+    public Velocity velocityCheck2;
+
     public GameObject rubbleEffect;
     public GameObject fireEffect;
     public GameObject smokeEffect;
@@ -68,7 +71,7 @@ public class BuildingCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider hand)
     {
-        if (hand.tag == "hand")
+        if (hand.tag == "hand" && (velocityCheck1.speed >= 30 || velocityCheck2.speed >= 30))
         {
             if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
             {
