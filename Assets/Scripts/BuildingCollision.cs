@@ -88,7 +88,7 @@ public class BuildingCollision : MonoBehaviour
     //function called when skyscraper is hit with hand
     void SkyscraperHit(Vector3 handPosition)
     {
-        int fireSpawnChance = Random.Range(0, 5);
+        int fireSpawnChance = Random.Range(0, 11);
         buildingHit = true;
         isShaking = true;
 
@@ -96,7 +96,7 @@ public class BuildingCollision : MonoBehaviour
 
         Instantiate(rubbleEffect, handPosition, Quaternion.identity);
 
-        if (fireSpawnChance == 4)
+        if (fireSpawnChance == 10)
         {
             if (fireOn == false)
             {
