@@ -71,7 +71,7 @@ public class BuildingCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider hand)
     {
-        if (hand.tag == "hand" && (velocityCheck1.speed >= 30 || velocityCheck2.speed >= 30))
+        if (hand.tag == "hand" && (velocityCheck1.speed >= 4 || velocityCheck2.speed >= 4))
         {
             if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
             {
