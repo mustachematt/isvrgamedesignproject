@@ -60,7 +60,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 52754914e1100a2498c45475e5a2d5a5, type: 2}
   - {fileID: 2100000, guid: 69bb725cfe9ae0446bfddd8e8cd284b8, type: 2}
-  - {fileID: 2100000, guid: ecf0c8c920ea9b24dac7bc5e61487e27, type: 2}
+  - {fileID: 2100000, guid: d7636558dbd50f7429a53d5bc6352a44, type: 2}
   - {fileID: 2100000, guid: 30436fe73486f444ea88cbb375db3166, type: 2}
   - {fileID: 2100000, guid: e908aeb0f05c23f48accd8859e576f16, type: 2}
   - {fileID: 2100000, guid: 3b408168ff3217946a796b6d1e18f30e, type: 2}
@@ -104,6 +104,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 37026fea9c0f20048bea5700b6d4b897, type: 3}

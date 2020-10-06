@@ -1705,12 +1705,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f59eb9aa0e65cf41aac1ffb2f3ebef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 15
   vrCamera: {fileID: 5606842961461800951}
   walk:
     actionPath: /actions/monster/in/MovementAxis
     needsReinit: 0
   rightHand: 2
-  walkSpeed: 15
 --- !u!54 &1261974997
 Rigidbody:
   m_ObjectHideFlags: 0

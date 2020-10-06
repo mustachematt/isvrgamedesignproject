@@ -293,7 +293,7 @@ namespace Valve.VR.InteractionSystem
 
         protected float blendToPoseTime = 0.1f;
         protected float releasePoseBlendTime = 0.2f;
-
+        
         protected virtual void OnAttachedToHand(Hand hand)
         {
             if (activateActionSetOnAttach != null)
@@ -314,7 +314,7 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void OnDetachedFromHand(Hand hand)
         {
-            if (activateActionSetOnAttach != null)
+=            if (activateActionSetOnAttach != null)
             {
                 if (hand.otherHand == null || hand.otherHand.currentAttachedObjectInfo.HasValue == false ||
                     (hand.otherHand.currentAttachedObjectInfo.Value.interactable != null &&
