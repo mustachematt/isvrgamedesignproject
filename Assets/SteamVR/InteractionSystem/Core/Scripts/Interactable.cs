@@ -314,7 +314,7 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void OnDetachedFromHand(Hand hand)
         {
-=            if (activateActionSetOnAttach != null)
+            if (activateActionSetOnAttach != null)
             {
                 if (hand.otherHand == null || hand.otherHand.currentAttachedObjectInfo.HasValue == false ||
                     (hand.otherHand.currentAttachedObjectInfo.Value.interactable != null &&
