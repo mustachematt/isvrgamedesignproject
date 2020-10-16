@@ -34,7 +34,7 @@ public class BuildingCollision : MonoBehaviour
     {
         tempSinkDistance = sinkDistance;
         originPosition = transform.position;
-        fireLocation = new Vector3(transform.position.x, -50f, transform.position.z);
+        fireLocation = new Vector3(transform.position.x, 20f, transform.position.z);
     }
 
      void FixedUpdate()
@@ -76,7 +76,7 @@ public class BuildingCollision : MonoBehaviour
             if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
             {
                 if(buildingHit == false)
-                SkyscraperHit(hand.transform.position);
+                    SkyscraperHit(hand.transform.position);
             }
             else if (gameObject.tag == "house")
             {
