@@ -7,12 +7,16 @@ public class EffectDespawn : MonoBehaviour
     public AudioClip destroySound1;
     public AudioClip destroySound2;
     AudioSource destructionSounds;
+    public float pitchRange;
 
     public float despawnTime;
 
     void Start()
     {
         destructionSounds = GetComponent<AudioSource>();
+
+        float randPitch = (Random.Range(1.0f - pitchRange, 1.0f + pitchRange));
+        destructionSounds.pitch = randPitch;
 
         int rubbleSoundChance = Random.Range(1, 3);
 
