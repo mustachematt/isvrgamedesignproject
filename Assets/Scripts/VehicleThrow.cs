@@ -5,7 +5,8 @@ using UnityEngine;
 public class VehicleThrow : MonoBehaviour
 {
 
-    public GameObject explosion;
+    public GameObject explosionLarge;
+    public GameObject explosionSmall;
     public float neededSpeed;
     Velocity vel;
     bool hitBuilding = false;
@@ -19,22 +20,16 @@ public class VehicleThrow : MonoBehaviour
     {
         if (CheckTag(other.gameObject.tag) == true)
         {
-
-            //***************
-            //add building damage here
-
-            //***************
-
             if (vel.speed >= neededSpeed)
             {
-                Instantiate(explosion, transform.position, Quaternion.identity);
-                Destroy(gameObject); //maybe move outside if statement - fix later
+                Instantiate(explosionLarge, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
             else { hitBuilding = true; }
         }
         if (other.gameObject.tag == "ground" && hitBuilding == true)
         {
-            //small explosion
+            Instantiate(explosionSmall, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -62,5 +57,4 @@ public class VehicleThrow : MonoBehaviour
             return false;
         }
     }
-    
 }

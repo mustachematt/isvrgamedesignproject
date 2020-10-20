@@ -18,11 +18,11 @@ public class EffectDespawn : MonoBehaviour
         float randPitch = (Random.Range(1.0f - pitchRange, 1.0f + pitchRange));
         destructionSounds.pitch = randPitch;
 
-        int rubbleSoundChance = Random.Range(1, 3);
+        int soundChance = Random.Range(1, 3);
 
-        if (rubbleSoundChance == 1)
+        if (soundChance == 1)
             destructionSounds.PlayOneShot(destroySound1, 0.7F);
-        if (rubbleSoundChance == 2)
+        else
             destructionSounds.PlayOneShot(destroySound2, 0.7F);
     }
 

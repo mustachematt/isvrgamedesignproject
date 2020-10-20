@@ -12,6 +12,7 @@ TagManager:
   - gas station
   - building
   - ground
+  - vehicle
   layers:
   - Default
   - TransparentFX
