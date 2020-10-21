@@ -85,6 +85,22 @@ public class BuildingCollision : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "vehicle")
+        {
+            if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
+            {
+                if (buildingHit == false)
+                    SkyscraperHit(other.transform.position);
+            }
+            else if (gameObject.tag == "house")
+            {
+                HouseDestroy();
+            }
+        }
+    }
+
     //function called when skyscraper is hit with hand
     void SkyscraperHit(Vector3 handPosition)
     {
