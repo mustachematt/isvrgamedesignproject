@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     public SteamVR_Action_Vector2 walk;
     public SteamVR_Input_Sources rightHand;
 
+    private bool isPlaying;
+    private AudioSource source;
     private Vector3 walkVector;
     private Vector3 velocity;
     private CharacterController characterController;
@@ -17,8 +19,9 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
+        isPlaying = false;
         walkVector = Vector3.zero;
-        velocity = Vector3.forward; // to fix the camera issue at the start
+        source = GetComponent<AudioSource>();
         characterController = GetComponent<CharacterController>();
         walk.AddOnAxisListener(GetWalkDirection, rightHand);
     }
@@ -44,11 +47,34 @@ public class PlayerMove : MonoBehaviour
 
         // move the player in that direction
         characterController.SimpleMove(velocity);
-        walkVector = Vector3.zero; // reset
+
+        // the sound should not play initially as the player is not moving
+        // if the player starts moving, 
+        //     play the sound and let it loop
+        //     Play() should only be called once.
+        //     After this call, set isPlaying to true to prevent future calls while the player is still moving
+        // if the player stops moving
+        //     set isPlaying to false to allow us to start playing the sound again once the player is moving again
+        //     stop looping the sound to let it stop naturally
+
+        if (velocity.magnitude > 1f && !isPlaying)
+        {
+            source.loop = true;
+            source.Play();
+            isPlaying = true;
+        }
+        else if (velocity.magnitude <= 1f && isPlaying)
+        {
+            source.loop = false;
+            isPlaying = false;
+        }
+
+        walkVector = Vector3.zero; // reset the walk vector
 
         // adjust the position of the capsule to be where the player is in real space
         Vector3 cameraPositionXZ = new Vector3(vrCamera.transform.position.x, 0, vrCamera.transform.position.z);
         Vector3 capsulePositionXZ = new Vector3(transform.position.x, 0, transform.position.z);
+
         characterController.center = (cameraPositionXZ - capsulePositionXZ) / 4.5f;
     }
 }

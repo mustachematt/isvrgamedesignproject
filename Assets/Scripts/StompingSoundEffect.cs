@@ -12,7 +12,6 @@ public class StompingSoundEffect : MonoBehaviour
     int currentFrames = 0;
     public float pitchRange;
 
-    // Start is called before the first frame update
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -20,16 +19,15 @@ public class StompingSoundEffect : MonoBehaviour
         currentFrames = waitFrames;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(currentFrames > 0)
+        if (currentFrames > 0)
         {
             currentFrames--;
         }
         if (currentFrames <= 0)
         {
-            if (monsterSpeed.speed > 0)
+            if (monsterSpeed.speed > 1)
             {
                 //int rand = (Random.Range(1, 3));
                 float randPitch = (Random.Range(1.0f - pitchRange, 1.0f + pitchRange));
