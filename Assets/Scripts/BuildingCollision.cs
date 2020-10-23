@@ -69,14 +69,14 @@ public class BuildingCollision : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider hand)
+    void OnTriggerEnter(Collider other)
     {
-        if (hand.tag == "hand" && (velocityCheck1.speed >= 4 || velocityCheck2.speed >= 4))
+        if ((other.tag == "hand" && (velocityCheck1.speed >= 4 || velocityCheck2.speed >= 4)) || other.tag == "explosion")
         {
             if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
             {
                 if(buildingHit == false)
-                    SkyscraperHit(hand.transform.position);
+                    SkyscraperHit(other.transform.position);
             }
             else if (gameObject.tag == "house")
             {

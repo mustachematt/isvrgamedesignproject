@@ -13,6 +13,7 @@ TagManager:
   - building
   - ground
   - vehicle
+  - explosion
   layers:
   - Default
   - TransparentFX
