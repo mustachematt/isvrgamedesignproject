@@ -40,7 +40,7 @@ public class TankMovement : MonoBehaviour
         goal7 = GameObject.Find("tankGoal7").transform;
         goal8 = GameObject.Find("tankGoal8").transform;
         goal9 = GameObject.Find("tankGoal9").transform;
-        player = GameObject.Find("testPlayerGoal").transform;  //change to actual player obj when ready
+        player = GameObject.FindGameObjectWithTag("Player").transform;  //change to actual player obj when ready
 
         nav1 = GetComponent<NavMeshAgent>();
 
