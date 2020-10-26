@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class tankSpawn : MonoBehaviour
 {
+    static int onePerSeconds = 20;     //had it at 20
+
     public GameObject tank;
-    int spawnChance = ( 20  *60); //determines the chance each frame that a tank will be spawned 
+    int spawnChance = (onePerSeconds  *60); //determines the chance each frame that a tank will be spawned 
 
     
     void Update()
