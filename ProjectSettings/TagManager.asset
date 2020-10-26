@@ -14,6 +14,7 @@ TagManager:
   - ground
   - vehicle
   - explosion
+  - tank
   layers:
   - Default
   - TransparentFX
