@@ -95,7 +95,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.1, y: 1.2, z: 1.8}
-  m_Center: {x: 0, y: 0.1, z: 0}
+  m_Center: {x: 0, y: -0.16, z: 0}
 --- !u!54 &2746890397801077598
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2746890397801077593}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
@@ -163,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413240, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.017
+      value: -0.317
       objectReference: {fileID: 0}
     - target: {fileID: 413240, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
       propertyPath: m_LocalPosition.z

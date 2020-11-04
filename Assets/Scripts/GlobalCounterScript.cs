@@ -77,7 +77,11 @@ public class GlobalCounterScript : MonoBehaviour
         scoreText.text = "Score: " + currentPoints.ToString();
         minleft = (int)(timer / 60);
         secleft = (int)(timer % 60);
-        timerText.text = "Time: " + minleft.ToString() + ":" + secleft.ToString();
+
+        if (secleft >= 10)
+            timerText.text = "Time: " + minleft.ToString() + ":" + secleft.ToString();
+        else
+            timerText.text = "Time: " + minleft.ToString() + ":0" + secleft.ToString();
 
 
         if(won == true)
