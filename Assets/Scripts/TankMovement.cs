@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class TankMovement : MonoBehaviour
 {
+
+    public GameObject bulletMaker;
+
     Vector3 goTo;
 
     Transform player;
@@ -23,7 +26,7 @@ public class TankMovement : MonoBehaviour
 
     int pickGoal;
     int goalDistance = 10;
-    int playerRadius = 30;
+    int playerRadius = 20;  //was 30, changed to 20
 
     bool patrol = true;
     bool shoot = false;
@@ -50,6 +53,17 @@ public class TankMovement : MonoBehaviour
     
     void Update()
     {
+        //shooting
+        if(shoot == true)
+        {
+            bulletMaker.SetActive(true);
+        }
+        else
+        {
+            bulletMaker.SetActive(false);
+        }
+
+
         if (patrol)
         {
             nav1.destination = goTo;

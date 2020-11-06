@@ -114,4 +114,9 @@ public class GlobalCounterScript : MonoBehaviour
             lostText.SetActive(false);
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
 }
