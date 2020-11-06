@@ -15,6 +15,7 @@ TagManager:
   - vehicle
   - explosion
   - tank
+  - helicopter
   layers:
   - Default
   - TransparentFX
