@@ -18819,7 +18819,7 @@ GameObject:
   - component: {fileID: 2108120202032296640}
   m_Layer: 0
   m_Name: CFX_Explosion_B_Smoke+Text
-  m_TagString: FxTemporaire
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

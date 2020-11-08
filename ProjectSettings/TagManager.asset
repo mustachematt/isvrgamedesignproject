@@ -16,6 +16,8 @@ TagManager:
   - explosion
   - tank
   - helicopter
+  - globalCounter
+  - body
   layers:
   - Default
   - TransparentFX

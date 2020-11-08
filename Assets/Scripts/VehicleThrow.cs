@@ -16,6 +16,15 @@ public class VehicleThrow : MonoBehaviour
         vel = GetComponent<Velocity>();
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "explosion")
+        {
+            Instantiate(explosionSmall, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
+
     void OnCollisionEnter(Collision other)
     {
         if (CheckTag(other.gameObject.tag) == true)
@@ -49,6 +58,14 @@ public class VehicleThrow : MonoBehaviour
             return true;
         }
         else if (myTag == "gas station")
+        {
+            return true;
+        }
+        else if (myTag == "vehicle")
+        {
+            return true;
+        }
+        else if (myTag == "helicopter")
         {
             return true;
         }

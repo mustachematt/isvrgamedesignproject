@@ -41,6 +41,9 @@ public class GlobalCounterScript : MonoBehaviour
     int minleft;
     int secleft;
 
+    public int tankCounter;
+    public int helicopterCounter;
+
 
     void Start()
     {
