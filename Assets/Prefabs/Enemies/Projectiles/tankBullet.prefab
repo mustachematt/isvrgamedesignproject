@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1516052759550588788}
   - component: {fileID: 1516052759550588789}
   - component: {fileID: 1516052759550588790}
+  - component: {fileID: 3787373565532147207}
   - component: {fileID: 6059403367312544070}
   m_Layer: 0
   m_Name: tankBullet
@@ -104,11 +105,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516052759550588791}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -119,13 +120,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516052759550588791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 551bf4b9062ee1f4aa0274359fafa999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
   shellFire: {fileID: 8300000, guid: 98ee43f119dde354a9d69cbe815e5a98, type: 3}
+--- !u!114 &3787373565532147207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516052759550588791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65467130d2cef4a41840cfedf2b7e6d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missleSpeed: 10
+  missleLaunch: {fileID: 8300000, guid: 98ee43f119dde354a9d69cbe815e5a98, type: 3}
+  explosion: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
+  damage: 5
 --- !u!82 &6059403367312544070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -248,19 +265,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000008078812
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.12820426
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000010443564
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9917478
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_RootOrder
@@ -268,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4938090031410300, guid: 05c866d08eb8b9442bf7b4c3e8ed5b29, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

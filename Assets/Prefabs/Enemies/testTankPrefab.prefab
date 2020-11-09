@@ -326,7 +326,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 105
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 20
@@ -459,10 +459,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 416716, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 419704, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.032
@@ -470,6 +466,10 @@ PrefabInstance:
     - target: {fileID: 438754, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.588
+      objectReference: {fileID: 0}
+    - target: {fileID: 416716, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}

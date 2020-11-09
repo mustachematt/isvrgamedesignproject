@@ -6,8 +6,8 @@ public class TankTurretTurn : MonoBehaviour
 {
     public TankMovement tankMode;
 
-    //float speed = 1.0f;
     Transform player;
+    float strength = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,9 @@ public class TankTurretTurn : MonoBehaviour
     {
         if (tankMode.shoot || tankMode.chase)
         {
-        //Vector3 targetDirection = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
-        transform.LookAt(player);
+            Quaternion targetRotation = Quaternion.LookRotation(player.position - transform.position);
+            float str = Mathf.Min(strength * Time.deltaTime, 1);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, str);
         }
     }
 }

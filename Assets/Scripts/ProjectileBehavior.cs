@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class HelicopterMissleBehavior : MonoBehaviour
+public class ProjectileBehavior : MonoBehaviour
 {
     Rigidbody missleRigidbody;
     public float missleSpeed;
@@ -14,6 +14,8 @@ public class HelicopterMissleBehavior : MonoBehaviour
     public GameObject explosion;
 
     GlobalCounterScript health;
+
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +59,7 @@ public class HelicopterMissleBehavior : MonoBehaviour
 
     void missleDamage()
     {
-        health.TakeDamage(5);
+        health.TakeDamage(damage);
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

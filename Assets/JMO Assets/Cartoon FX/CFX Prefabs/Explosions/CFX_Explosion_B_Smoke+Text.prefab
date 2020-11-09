@@ -23476,8 +23476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b05a09b65aceaa4f904c91df0d767a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroySound1: {fileID: 8300000, guid: c34bd8188558cfb498da01688fd81163, type: 3}
-  destroySound2: {fileID: 8300000, guid: c34bd8188558cfb498da01688fd81163, type: 3}
+  destroySound1: {fileID: 8300000, guid: 4a94895c3cfc23b488a9670f83b4c0bf, type: 3}
+  destroySound2: {fileID: 8300000, guid: 4a94895c3cfc23b488a9670f83b4c0bf, type: 3}
   pitchRange: 0.25
   despawnTime: 3
 --- !u!82 &2108120202032296640
@@ -23489,9 +23489,10 @@ AudioSource:
   m_GameObject: {fileID: 1892078723244562}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: 243366450046692526, guid: ec12f7772c03e4c4c9e4c2f1643595ad,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 4a94895c3cfc23b488a9670f83b4c0bf, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -23501,7 +23502,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0

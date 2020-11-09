@@ -40,7 +40,7 @@ public class tankBulletMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "body")
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             GameObject.Find("GlobalCounter").GetComponent<GlobalCounterScript>().TakeDamage(bulletDamage);

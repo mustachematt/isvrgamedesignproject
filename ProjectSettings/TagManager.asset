@@ -18,6 +18,7 @@ TagManager:
   - helicopter
   - globalCounter
   - body
+  - head
   layers:
   - Default
   - TransparentFX
