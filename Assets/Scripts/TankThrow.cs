@@ -17,7 +17,7 @@ public class TankThrow : MonoBehaviour
     GlobalCounterScript spawnLimit;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         vel = GetComponent<Velocity>();
         spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();

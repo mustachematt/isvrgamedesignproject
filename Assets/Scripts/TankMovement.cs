@@ -30,8 +30,8 @@ public class TankMovement : MonoBehaviour
     public int playerRadius = 20;  //was 30, changed to 20, and helicopter distance is 35 now.
 
     bool patrol = true;
-    bool shoot = false;
-    bool chase = false;
+    public bool shoot = false;
+    public bool chase = false;
 
     Velocity leftHandVelocity;
     Velocity rightHandVelocity;
