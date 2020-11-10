@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Valve.VR.InteractionSystem;
 
 public class TankMovement : MonoBehaviour
 {
@@ -26,11 +27,21 @@ public class TankMovement : MonoBehaviour
 
     int pickGoal;
     int goalDistance = 10;
-    int playerRadius = 20;  //was 30, changed to 20
+    public int playerRadius = 20;  //was 30, changed to 20, and helicopter distance is 35 now.
 
     bool patrol = true;
-    bool shoot = false;
-    bool chase = false;
+    public bool shoot = false;
+    public bool chase = false;
+
+    Velocity leftHandVelocity;
+    Velocity rightHandVelocity;
+
+    public GameObject explosionLarge;
+
+    GlobalCounterScript spawnLimit;
+    TankMovement tankMovementScript;
+    TankThrow tankThrowScript;
+    Throwable VRHand;
 
     void Start()
     {
@@ -47,8 +58,23 @@ public class TankMovement : MonoBehaviour
 
         nav1 = GetComponent<NavMeshAgent>();
 
+        // For VR headset uncomment this 
+        //leftHandVelocity = GameObject.Find("LeftHandTrigger").GetComponent<Velocity>();
+        //rightHandVelocity = GameObject.Find("RightHandTrigger").GetComponent<Velocity>();
+
+        // For testing without VR headset Uncomment this
+        leftHandVelocity = GameObject.Find("TempHandLeft").GetComponent<Velocity>();
+        rightHandVelocity = GameObject.Find("TempHandRight").GetComponent<Velocity>();
+
+        spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
+
+        tankMovementScript = GetComponent<TankMovement>();
+        tankThrowScript = GetComponent<TankThrow>();
+        VRHand = GetComponent<Throwable>();
+
         ChooseLocation();
 
+        bulletMaker.SetActive(false);
     }
     
     void Update()
@@ -95,7 +121,26 @@ public class TankMovement : MonoBehaviour
 
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "hand" && (leftHandVelocity.speed >= 4 || rightHandVelocity.speed >= 4))
+        {
+            tankDestroyed();
+        }
+        if (other.tag == "explosion")
+        {
+            tankDestroyed();
+        }
+    }
 
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "hand" && VRHand.attached)
+        {
+            tankThrowScript.enabled = true;
+            tankMovementScript.enabled = false;
+        }
+    }
 
     void ChooseLocation()
     {
@@ -149,5 +194,12 @@ public class TankMovement : MonoBehaviour
         patrol = false;
         shoot = false;
         chase = true;
+    }
+
+    void tankDestroyed()
+    {
+        spawnLimit.tankCounter++;
+        Instantiate(explosionLarge, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

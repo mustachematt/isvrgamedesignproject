@@ -20,19 +20,36 @@ public class HelicopterMovement : MonoBehaviour
     bool chase = false;
     bool shoot = false;
 
-    public int shotDelay;
-    int shotDelayReset;
+    public float shotDelay;
+    float shotDelayReset;
+
+    Velocity leftHandVelocity;
+    Velocity rightHandVelocity;
+
+    public GameObject explosionLarge;
+
+    GlobalCounterScript spawnLimit;
 
     // Start is called before the first frame update
     void Start()
     {
+        spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         nav = GetComponent<NavMeshAgent>();
+
+        // For VR headset uncomment this 
+        //leftHandVelocity = GameObject.Find("LeftHandTrigger").GetComponent<Velocity>();
+        //rightHandVelocity = GameObject.Find("RightHandTrigger").GetComponent<Velocity>();
+
+        // For testing without VR headset Uncomment this
+        leftHandVelocity = GameObject.Find("TempHandLeft").GetComponent<Velocity>();
+        rightHandVelocity = GameObject.Find("TempHandRight").GetComponent<Velocity>();
+
         nav.enabled = false;
 
-        shotDelay = shotDelay * 60;
         shotDelayReset = shotDelay;
+        shotDelay = Random.Range(shotDelay, shotDelay + 3.0f) * 60f;
     }
 
     // Update is called once per frame
@@ -75,6 +92,7 @@ public class HelicopterMovement : MonoBehaviour
                 Instantiate(missle, missleSpawn[spawnSelect].transform.position, transform.rotation);
 
                 shotDelay = shotDelayReset;
+                shotDelay = Random.Range(shotDelay, shotDelay + 3.0f) * 60f;
             }
 
             shotDelay--;
@@ -90,6 +108,22 @@ public class HelicopterMovement : MonoBehaviour
             {
                 toggleAttack(1);
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if ((other.tag == "hand" && (leftHandVelocity.speed >= 4 || rightHandVelocity.speed >= 4)) || other.tag == "explosion")
+        {
+            helicopterDestroyed();
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "vehicle" || other.gameObject.tag == "tank")
+        {
+            helicopterDestroyed();
         }
     }
 
@@ -109,5 +143,12 @@ public class HelicopterMovement : MonoBehaviour
                 shoot = true;
                 break;
         }
+    }
+
+    void helicopterDestroyed()
+    {
+        spawnLimit.helicopterCounter++;
+        Instantiate(explosionLarge, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

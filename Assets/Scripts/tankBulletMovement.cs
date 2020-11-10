@@ -15,12 +15,18 @@ public class tankBulletMovement : MonoBehaviour
     GameObject player;
     Vector3 change;
 
+    AudioSource shellSound;
+    public AudioClip shellFire;
+
     void Start()
     {
+        shellSound = GetComponent<AudioSource>();
         startPos = GetComponent<Transform>().position;
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform.position + moveUpTarget;
         change = (playerPos - startPos) / increment;
+
+        shellSound.PlayOneShot(shellFire, 0.7f);
     }
 
 
@@ -34,7 +40,7 @@ public class tankBulletMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "body")
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             GameObject.Find("GlobalCounter").GetComponent<GlobalCounterScript>().TakeDamage(bulletDamage);
@@ -45,7 +51,7 @@ public class tankBulletMovement : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        else if (other.gameObject.tag == "skyscraper")
+        else
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);

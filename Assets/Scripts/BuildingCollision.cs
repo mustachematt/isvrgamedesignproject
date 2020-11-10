@@ -87,7 +87,7 @@ public class BuildingCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "vehicle")
+        if(other.gameObject.tag == "vehicle" || other.gameObject.tag == "tank")
         {
             if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
             {

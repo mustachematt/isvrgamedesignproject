@@ -1,33 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class HelicopterSpawn : MonoBehaviour
 {
-    public GameObject helicopter;
+    static int onePerSeconds = 60;     // Had it at 60
 
-    public int spawnChance;
-    public int delayRange;
-    public int delayReset;
-    // Start is called before the first frame update
+    GlobalCounterScript spawnLimit;
+
+    public GameObject helicopter;
+    int spawnChance = (onePerSeconds * 60); // Determines the chance each frame that a helicopter will be spawned 
+
+    public bool spawnDelay = false;
+
+    int timer = 300;
+
     void Start()
     {
-        delayReset = delayRange;
-        delayRange = Random.Range(delayRange, delayRange + 11) * 60;
+        spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (delayRange <= 0)
+        if (spawnLimit.helicopterCounter > 0 && !spawnDelay) // Limit number of tanks that spawn.
         {
-            if (Random.Range(1, spawnChance + 1) == 1)
+            if (Random.Range(0, spawnChance) == 1)
             {
                 Instantiate(helicopter, transform.position, Quaternion.identity);
-                delayRange = delayReset;
-                delayRange = Random.Range(delayRange, delayRange + 11) * 60;
+                spawnLimit.helicopterCounter--;
+                spawnDelay = true;
             }
         }
-        delayRange--;
+        if (spawnDelay)
+        {
+            timer--;
+            if (timer <= 0)
+            {
+                spawnDelay = false;
+                timer = 300;
+            }
+        }
     }
 }
