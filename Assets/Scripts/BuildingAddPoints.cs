@@ -33,15 +33,17 @@ public class BuildingAddPoints : MonoBehaviour
         }
 
         globalCounter = GameObject.Find("GlobalCounter");
-        globalCounter.GetComponent<GlobalCounterScript>().totalPercentPoints += myPointValue;
+        if (globalCounter != null) // if it can't be found
+            globalCounter.GetComponent<GlobalCounterScript>().totalPercentPoints += myPointValue;
 
     }
 
     void OnDestroy()
     {
-        
-        globalCounter.GetComponent<GlobalCounterScript>().currentPercentPoints += myPointValue;
-        globalCounter.GetComponent<GlobalCounterScript>().currentPoints += myPointValue;
-        
+        if (globalCounter != null)
+        {
+            globalCounter.GetComponent<GlobalCounterScript>().currentPercentPoints += myPointValue;
+            globalCounter.GetComponent<GlobalCounterScript>().currentPoints += myPointValue;
+        }
     }
 }

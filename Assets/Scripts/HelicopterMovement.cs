@@ -39,12 +39,12 @@ public class HelicopterMovement : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
 
         // For VR headset uncomment this 
-        //leftHandVelocity = GameObject.Find("LeftHandTrigger").GetComponent<Velocity>();
-        //rightHandVelocity = GameObject.Find("RightHandTrigger").GetComponent<Velocity>();
+        leftHandVelocity = GameObject.Find("LeftHandTrigger").GetComponent<Velocity>();
+        rightHandVelocity = GameObject.Find("RightHandTrigger").GetComponent<Velocity>();
 
         // For testing without VR headset Uncomment this
-        leftHandVelocity = GameObject.Find("TempHandLeft").GetComponent<Velocity>();
-        rightHandVelocity = GameObject.Find("TempHandRight").GetComponent<Velocity>();
+        //leftHandVelocity = GameObject.Find("TempHandLeft").GetComponent<Velocity>();
+        //rightHandVelocity = GameObject.Find("TempHandRight").GetComponent<Velocity>();
 
         nav.enabled = false;
 
