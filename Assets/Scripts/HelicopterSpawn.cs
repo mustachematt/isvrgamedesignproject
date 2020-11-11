@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HelicopterSpawn : MonoBehaviour
 {
-    static int onePerSeconds = 60;     // Had it at 60
+    static int onePerSeconds = 90;     // Had it at 90
 
     GlobalCounterScript spawnLimit;
 
