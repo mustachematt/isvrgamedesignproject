@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
-    public GameObject bullet;
+    public GameObject bulletPrefab;
     public GameObject smoke;
+
+    public GameObject tank;
+    private GameObject bullet;
 
     int timeBetweenShots = 300;
 
     int currentTime = 100;
 
+    public bool damageIndicatorOn = false;
 
     void Start()
     {
@@ -26,8 +30,24 @@ public class BulletSpawner : MonoBehaviour
         if(currentTime >= timeBetweenShots)
         {
             Instantiate(smoke, transform.position, transform.rotation);
-            Instantiate(bullet, transform.position, transform.rotation);
+            bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            bullet.transform.SetParent(tank.transform);
             currentTime = 0;
         }
+    }
+
+    void Update()
+    {
+        if (damageIndicatorOn)
+        {
+            Register();
+            damageIndicatorOn = false;
+        }
+    }
+
+    void Register()
+    {
+        if (!DamageIndicatorSystem.CheckIfObjectInSight(this.transform))
+            DamageIndicatorSystem.CreateIndicator(this.transform);
     }
 }

@@ -12,7 +12,10 @@ public class HelicopterMovement : MonoBehaviour
     public HeliBladeRotation bladeSpeed;
 
     public GameObject[] missleSpawn;
-    public GameObject missle;
+    public GameObject misslePrefab;
+
+    public GameObject helicopter;
+    private GameObject missle;
 
     public int playerRadius;
 
@@ -29,6 +32,8 @@ public class HelicopterMovement : MonoBehaviour
     public GameObject explosionLarge;
 
     GlobalCounterScript spawnLimit;
+
+    public bool damageIndicatorOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +94,9 @@ public class HelicopterMovement : MonoBehaviour
             {
                 int spawnSelect = Random.Range(0, 4);
 
-                Instantiate(missle, missleSpawn[spawnSelect].transform.position, transform.rotation);
+                missle = Instantiate(misslePrefab, missleSpawn[spawnSelect].transform.position, transform.rotation);
+                missle.transform.SetParent(helicopter.transform);
+
 
                 shotDelay = shotDelayReset;
                 shotDelay = Random.Range(shotDelay, shotDelay + 3.0f) * 60f;
@@ -108,6 +115,12 @@ public class HelicopterMovement : MonoBehaviour
             {
                 toggleAttack(1);
             }
+        }
+
+        if (damageIndicatorOn)
+        {
+            Register();
+            damageIndicatorOn = false;
         }
     }
 
@@ -150,5 +163,11 @@ public class HelicopterMovement : MonoBehaviour
         spawnLimit.helicopterCounter++;
         Instantiate(explosionLarge, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public void Register()
+    {
+        if (!DamageIndicatorSystem.CheckIfObjectInSight(this.transform))
+            DamageIndicatorSystem.CreateIndicator(this.transform);
     }
 }

@@ -19,6 +19,9 @@ TagManager:
   - globalCounter
   - body
   - head
+  - canvas
+  - turret
+  - tankBulletSpawner
   layers:
   - Default
   - TransparentFX

@@ -467,10 +467,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.588
       objectReference: {fileID: 0}
-    - target: {fileID: 416716, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0378b47d76c394dbb09985cf5dc360, type: 3}
 --- !u!4 &3978832704631889077 stripped
@@ -501,6 +497,11 @@ PrefabInstance:
     - target: {fileID: 1901186644638197321, guid: 0d80ceb642da974439d989a90ae8ee92,
         type: 3}
       propertyPath: m_Name
+      value: tankBulletSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901186644638197321, guid: 0d80ceb642da974439d989a90ae8ee92,
+        type: 3}
+      propertyPath: m_TagString
       value: tankBulletSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 1901186644638197325, guid: 0d80ceb642da974439d989a90ae8ee92,

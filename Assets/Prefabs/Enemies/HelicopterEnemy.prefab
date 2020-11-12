@@ -501,9 +501,11 @@ MonoBehaviour:
   - {fileID: 646458087}
   - {fileID: 1075336014}
   - {fileID: 857023245}
-  missle: {fileID: 5206449630072583598, guid: 3f28541ab20d9154aba70cbfebe7c68d, type: 3}
+  misslePrefab: {fileID: 5206449630072583598, guid: 3f28541ab20d9154aba70cbfebe7c68d,
+    type: 3}
+  helicopter: {fileID: 8405351545871218531}
   playerRadius: 35
-  shotDelay: 1.5
+  shotDelay: 2
   explosionLarge: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
     type: 3}
 --- !u!82 &-7097586126794504747

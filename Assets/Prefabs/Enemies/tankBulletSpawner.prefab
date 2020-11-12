@@ -91,5 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cec5760521cc847a1f9568c07f452a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1516052759550588791, guid: d311d9ee2ef2be946ab5f6f083066437, type: 3}
+  bulletPrefab: {fileID: 1516052759550588791, guid: d311d9ee2ef2be946ab5f6f083066437,
+    type: 3}
   smoke: {fileID: 2818529263730788338, guid: 82f07c1d6036cd44891f218af10f31ce, type: 3}
+  tank: {fileID: 1901186644638197321}
