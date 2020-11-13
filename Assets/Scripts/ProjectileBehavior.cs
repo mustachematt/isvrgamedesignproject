@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class ProjectileBehavior : MonoBehaviour
@@ -13,16 +12,11 @@ public class ProjectileBehavior : MonoBehaviour
 
     public GameObject explosion;
 
-    GlobalCounterScript health;
-
-    public int damage;
-
     // Start is called before the first frame update
     void Start()
     {
         missleSound = GetComponent<AudioSource>();
         missleRigidbody = GetComponent<Rigidbody>();
-        health = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
 
         missleSound.PlayOneShot(missleLaunch, 0.7F);
     }
@@ -35,31 +29,16 @@ public class ProjectileBehavior : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Player") // changed from body
-            missleDamage();
-        else
-            destroyMissle();
+        destroyMissle();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "hand")
-        {
-            destroyMissle();
-        }
-        else
-            destroyMissle();
+        destroyMissle();
     }
 
     void destroyMissle()
     {
-        Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
-
-    void missleDamage()
-    {
-        health.TakeDamage(damage);
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
