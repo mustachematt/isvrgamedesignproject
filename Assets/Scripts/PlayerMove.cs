@@ -73,8 +73,8 @@ public class PlayerMove : MonoBehaviour
 
         // adjust the position of the capsule to be where the player is in real space
         Vector3 cameraPositionXZ = new Vector3(vrCamera.transform.position.x, 0, vrCamera.transform.position.z);
-        Vector3 capsulePositionXZ = new Vector3(transform.position.x, 0, transform.position.z);
+        //Vector3 capsulePositionXZ = new Vector3(transform.position.x, 0, transform.position.z);
 
-        characterController.center = (cameraPositionXZ - capsulePositionXZ) / 4.5f;
+        //characterController.center = (cameraPositionXZ - capsulePositionXZ) / 4.5f;
     }
 }

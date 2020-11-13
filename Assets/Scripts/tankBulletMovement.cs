@@ -24,7 +24,8 @@ public class tankBulletMovement : MonoBehaviour
         startPos = GetComponent<Transform>().position;
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform.position + moveUpTarget;
-        change = (playerPos - startPos) / increment;
+        //change = (playerPos - startPos) / increment;
+        change = playerPos.normalized / increment;
 
         shellSound.PlayOneShot(shellFire, 0.7f);
     }
@@ -32,6 +33,7 @@ public class tankBulletMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(playerPos.normalized);
         transform.position += change;
 
         if(Vector3.Distance(transform.position, startPos) > 40)

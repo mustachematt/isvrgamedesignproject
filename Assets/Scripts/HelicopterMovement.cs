@@ -34,7 +34,7 @@ public class HelicopterMovement : MonoBehaviour
     void Start()
     {
         spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("body").transform; // changed from Player
 
         nav = GetComponent<NavMeshAgent>();
 

@@ -12,7 +12,7 @@ public class TankTurretTurn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("body").transform; // changed from Player
     }
 
     // Update is called once per frame

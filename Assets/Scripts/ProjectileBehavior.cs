@@ -35,7 +35,7 @@ public class ProjectileBehavior : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "body")
+        if (other.gameObject.tag == "Player") // changed from body
             missleDamage();
         else
             destroyMissle();
