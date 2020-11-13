@@ -29,20 +29,12 @@ public class ProjectileBehavior : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "body")
-            destroyMissle();
-        else
-            destroyMissle();
+        destroyMissle();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "hand")
-        {
-            destroyMissle();
-        }
-        else
-            destroyMissle();
+        destroyMissle();
     }
 
     void destroyMissle()
