@@ -137,6 +137,7 @@ public class TankMovement : MonoBehaviour
     {
         if (other.tag == "hand" && VRHand.attached)
         {
+            nav1.enabled = false;
             tankThrowScript.enabled = true;
             tankMovementScript.enabled = false;
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class tankSpawn : MonoBehaviour
 {
-    static int onePerSeconds = 5;     //had it at 90
+    static int onePerSeconds = 90;     //had it at 90
 
     GlobalCounterScript spawnLimit;
 

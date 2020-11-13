@@ -495,7 +495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29f9e54ef58bdb46a0a689bab3930bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bladeSpinningSound: {fileID: 8300000, guid: c8fdc36c132d81c4b9cb259c7167b39b, type: 3}
   bladeSpeed: {fileID: 5670163022444435233}
   missleSpawn:
   - {fileID: 1014594772}
