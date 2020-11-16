@@ -123,11 +123,7 @@ public class TankMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "hand" && (leftHandVelocity.speed >= 4 || rightHandVelocity.speed >= 4))
-        {
-            tankDestroyed();
-        }
-        if (other.tag == "explosion")
+        if ((other.tag == "hand" && (leftHandVelocity.speed >= 4 || rightHandVelocity.speed >= 4)) || other.tag == "explosion")
         {
             tankDestroyed();
         }
@@ -138,6 +134,7 @@ public class TankMovement : MonoBehaviour
         if (other.tag == "hand" && VRHand.attached)
         {
             nav1.enabled = false;
+            bulletMaker.SetActive(false);
             tankThrowScript.enabled = true;
             tankMovementScript.enabled = false;
         }

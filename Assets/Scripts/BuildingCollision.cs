@@ -73,7 +73,7 @@ public class BuildingCollision : MonoBehaviour
     {
         if ((other.tag == "hand" && (velocityCheck1.speed >= 4 || velocityCheck2.speed >= 4)) || other.tag == "explosion")
         {
-            if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
+            if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag ==  "radioTower")
             {
                 if(buildingHit == false)
                     SkyscraperHit(other.transform.position);
@@ -89,7 +89,7 @@ public class BuildingCollision : MonoBehaviour
     {
         if(other.gameObject.tag == "vehicle" || other.gameObject.tag == "tank")
         {
-            if (gameObject.tag == "skyscraper" || gameObject.tag == "building")
+            if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag == "radioTower")
             {
                 if (buildingHit == false)
                     SkyscraperHit(other.transform.position);
