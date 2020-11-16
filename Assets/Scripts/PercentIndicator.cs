@@ -8,6 +8,8 @@ public class PercentIndicator : MonoBehaviour
     public GameObject counter;
     float needed;
 
+    public GameObject neededText;
+
     void Start()
     {
         needed = counter.GetComponent<GlobalCounterScript>().winPercent;
@@ -91,6 +93,12 @@ public class PercentIndicator : MonoBehaviour
         {
             gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector3(101, 201, 0);
         }
+
+
+        neededText.GetComponent<RectTransform>().anchoredPosition = 
+            new Vector3(gameObject.GetComponent<RectTransform>().anchoredPosition.x,
+            neededText.GetComponent<RectTransform>().anchoredPosition.y,
+            0);
 
     }
     void Update()
