@@ -66,6 +66,7 @@ public class GlobalCounterScript : MonoBehaviour
 
     public int tankCounter;
     public int helicopterCounter;
+    public int hotDogTruckCounter;
 
 
     void Start()
@@ -189,5 +190,10 @@ public class GlobalCounterScript : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+    }
+
+    public void IncreaseHealth(int heal)
+    {
+        health += heal;
     }
 }

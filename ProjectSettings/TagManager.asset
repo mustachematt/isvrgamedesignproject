@@ -23,6 +23,7 @@ TagManager:
   - turret
   - tankBulletSpawner
   - radioTower
+  - mouth
   layers:
   - Default
   - TransparentFX

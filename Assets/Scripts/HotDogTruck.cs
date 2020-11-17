@@ -8,7 +8,7 @@ public class HotDogTruck : MonoBehaviour
 
     Vector3 goTo;
 
-    Transform player;
+    //Transform player;
 
     Transform goal1;
     Transform goal2;
@@ -25,6 +25,9 @@ public class HotDogTruck : MonoBehaviour
     int pickGoal;
     int goalDistance = 10;
 
+    GlobalCounterScript spawnLimit;
+
+    public int heal;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,9 @@ public class HotDogTruck : MonoBehaviour
         goal9 = GameObject.Find("tankGoal9").transform;
 
         nav1 = GetComponent<NavMeshAgent>();
+
+        spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
+
         ChooseLocation();
     }
 
@@ -50,6 +56,19 @@ public class HotDogTruck : MonoBehaviour
         if (Vector3.Distance(goTo, transform.position) < goalDistance)
         {
             ChooseLocation();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "hand")
+            nav1.enabled = false;
+
+        if (other.tag == "mouth")
+        {
+            GameObject.Find("GlobalCounter").GetComponent<GlobalCounterScript>().IncreaseHealth(heal);
+            spawnLimit.hotDogTruckCounter++;
+            Destroy(gameObject);
         }
     }
 
