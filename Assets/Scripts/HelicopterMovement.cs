@@ -35,13 +35,16 @@ public class HelicopterMovement : MonoBehaviour
 
     public bool damageIndicatorOn = false;
 
+    int heliPointValue = 300;
+
     // Start is called before the first frame update
     void Start()
     {
+        nav = GetComponent<NavMeshAgent>();
+
         spawnLimit = GameObject.FindGameObjectWithTag("globalCounter").GetComponent<GlobalCounterScript>();
         player = GameObject.FindGameObjectWithTag("body").transform; // changed from Player
 
-        nav = GetComponent<NavMeshAgent>();
 
         // For VR headset uncomment this 
         leftHandVelocity = GameObject.Find("LeftHandTrigger").GetComponent<Velocity>();
@@ -162,7 +165,8 @@ public class HelicopterMovement : MonoBehaviour
     {
         spawnLimit.helicopterCounter++;
         Instantiate(explosionLarge, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        GameObject.FindWithTag("globalCounter").GetComponent<GlobalCounterScript>().currentPoints += heliPointValue;
+        Destroy(gameObject);   
     }
 
     public void Register()

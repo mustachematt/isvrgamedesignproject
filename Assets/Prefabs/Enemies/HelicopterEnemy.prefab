@@ -508,6 +508,7 @@ MonoBehaviour:
   shotDelay: 2
   explosionLarge: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
     type: 3}
+  damageIndicatorOn: 0
 --- !u!82 &-7097586126794504747
 AudioSource:
   m_ObjectHideFlags: 0

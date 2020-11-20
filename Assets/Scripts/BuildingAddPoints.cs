@@ -10,6 +10,7 @@ public class BuildingAddPoints : MonoBehaviour
     int mediumBuildingPoints = 300;
     int housePoints = 100;
     int gasStationPoints = 500;
+    int BasePoints = 10000;
 
     int myPointValue = 0;
     
@@ -31,6 +32,10 @@ public class BuildingAddPoints : MonoBehaviour
         {
             myPointValue = gasStationPoints;
         }
+        else if (tag == "militaryBase")
+        {
+            myPointValue = BasePoints;
+        }
 
         globalCounter = GameObject.Find("GlobalCounter");
         if (globalCounter != null) // if it can't be found
@@ -44,6 +49,10 @@ public class BuildingAddPoints : MonoBehaviour
         {
             globalCounter.GetComponent<GlobalCounterScript>().currentPercentPoints += myPointValue;
             globalCounter.GetComponent<GlobalCounterScript>().currentPoints += myPointValue;
+        }
+        if (tag == "militaryBase")
+        {
+            globalCounter.GetComponent<GlobalCounterScript>().decreaseSpawnLimit(); // if base destroyed, decrease spawn limit
         }
     }
 }

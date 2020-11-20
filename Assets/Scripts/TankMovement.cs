@@ -43,8 +43,12 @@ public class TankMovement : MonoBehaviour
     TankThrow tankThrowScript;
     Throwable VRHand;
 
+    int tankPointValue = 200;
+
     void Start()
     {
+        nav1 = GetComponent<NavMeshAgent>();
+
         goal1 = GameObject.Find("tankGoal1").transform;
         goal2 = GameObject.Find("tankGoal2").transform;
         goal3 = GameObject.Find("tankGoal3").transform;
@@ -56,7 +60,6 @@ public class TankMovement : MonoBehaviour
         goal9 = GameObject.Find("tankGoal9").transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;  //change to actual player obj when ready
 
-        nav1 = GetComponent<NavMeshAgent>();
 
         // For VR headset uncomment this 
         leftHandVelocity = GameObject.Find("LeftHandTrigger").GetComponent<Velocity>();
@@ -198,6 +201,7 @@ public class TankMovement : MonoBehaviour
     {
         spawnLimit.tankCounter++;
         Instantiate(explosionLarge, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        GameObject.FindWithTag("globalCounter").GetComponent<GlobalCounterScript>().currentPoints += tankPointValue;
+        Destroy(gameObject);     
     }
 }
