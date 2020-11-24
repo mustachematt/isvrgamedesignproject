@@ -42,10 +42,8 @@ public class PlayerMove : MonoBehaviour
 
     private void LateUpdate()
     {
-        // for movement smoothing
+        // move the player in that direction smoothly
         velocity = Vector3.Lerp(velocity, walkVector * walkSpeed, 3 * Time.deltaTime);
-
-        // move the player in that direction
         characterController.SimpleMove(velocity);
 
         // the sound should not play initially as the player is not moving
@@ -70,11 +68,5 @@ public class PlayerMove : MonoBehaviour
         }
 
         walkVector = Vector3.zero; // reset the walk vector
-
-        // adjust the position of the capsule to be where the player is in real space
-        Vector3 cameraPositionXZ = new Vector3(vrCamera.transform.position.x, 0, vrCamera.transform.position.z);
-        //Vector3 capsulePositionXZ = new Vector3(transform.position.x, 0, transform.position.z);
-
-        //characterController.center = (cameraPositionXZ - capsulePositionXZ) / 4.5f;
     }
 }
