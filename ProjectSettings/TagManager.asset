@@ -22,6 +22,8 @@ TagManager:
   - canvas
   - turret
   - tankBulletSpawner
+  - radioTower
+  - mouth
   layers:
   - Default
   - TransparentFX
