@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a44ab879efb1241ad278f6408e63bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 2
   turretParent: {fileID: 0}
 --- !u!114 &6890831372823192292
 MonoBehaviour:

@@ -125,10 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7454e669ee446214c81c79520116663f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 1
   tankParent: {fileID: 0}
-  heliParent: {fileID: 0}
-  turretParent: {fileID: 0}
 --- !u!114 &3787373565532147207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +142,6 @@ MonoBehaviour:
   missleSpeed: 10
   missleLaunch: {fileID: 8300000, guid: 98ee43f119dde354a9d69cbe815e5a98, type: 3}
   explosion: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
-  damage: 5
 --- !u!82 &6059403367312544070
 AudioSource:
   m_ObjectHideFlags: 0

@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GlobalCounterScript : MonoBehaviour
 
-{ 
-
-    public float winPercent; //change in editor - use decimal ---> ex: 0.8 = 80%
-           //to make percent bar indicator work, only have set to multiples of 5,   ex: 0.05, 0.10, 0.15, 0.20, 0.25, etc
-
-    public float timerStartMinutes; //change in editor - amount of time in minuites
+{
+    public int manualDifficultyTest_0to4_setTo5forOff = 5; // override playerprefs difficulty by setting to 0-4
+                                                                // setting to anything else will use playerprefs
 
     int maxHealth = 100;
 
@@ -64,13 +62,87 @@ public class GlobalCounterScript : MonoBehaviour
     int minleft;
     int secleft;
 
+    public float winPercent; //use decimal ---> ex: 0.8 = 80%
+                      //to make percent bar indicator work, only have set to multiples of 5,   ex: 0.05, 0.10, 0.15, 0.20, 0.25, etc
+
+    public float timerStartMinutes; //amount of time in minuites
+
     public int tankCounter;
     public int helicopterCounter;
     public int hotDogTruckCounter;
 
+    public int currentDifficulty = 0; // don't edit, just public for other scripts to access, (instead use manualDifficultytest to test)
 
-    void Start()
+    //spawn limits
+    int maxTankEasy = 10;
+    int maxTankNormal = 14;
+    int maxTankHard = 20;
+    int maxHeliEasy = 2;
+    int maxHeliNormal = 4;
+    int maxHeliHard = 8;
+    int maxHotDogNormal = 1;
+
+    void Awake()
     {
+        
+        //****************
+        ////Difficulty////
+
+        if (manualDifficultyTest_0to4_setTo5forOff == 0 ||
+           manualDifficultyTest_0to4_setTo5forOff == 1 ||
+           manualDifficultyTest_0to4_setTo5forOff == 2 ||
+           manualDifficultyTest_0to4_setTo5forOff == 3 ||
+           manualDifficultyTest_0to4_setTo5forOff == 4)
+        {
+            currentDifficulty = manualDifficultyTest_0to4_setTo5forOff;
+        }
+        else
+        {
+            currentDifficulty = PlayerPrefs.GetInt("difficulty", 2);
+        }
+            //Difficulty levels:
+                // 0 - endless mode - mix between easy and normal, but no time limit
+                // 1 - easy
+                // 2 - normal
+                // 3 - difficult
+                // 4 - god mode (harder enemies and completion goal, but given all powerups)
+
+        if(currentDifficulty == 0)
+        {
+            winPercent = 0.9f;
+            timerStartMinutes = 1; // won't be used
+            tankCounter = maxTankNormal;
+            helicopterCounter = maxHeliNormal;
+        }
+        else if(currentDifficulty == 1)
+        {
+            winPercent = 0.6f;
+            timerStartMinutes = 30;
+            tankCounter = maxTankEasy;
+            helicopterCounter = maxHeliEasy;
+        }
+        else if (currentDifficulty == 3 || currentDifficulty == 4)
+        {
+            winPercent = 0.8f;
+            timerStartMinutes = 20;
+            tankCounter = maxTankHard;
+            helicopterCounter = maxHeliHard;
+        }
+        else   //normal mode
+        {
+            winPercent = 0.7f;
+            timerStartMinutes = 20;
+            tankCounter = maxTankNormal;
+            helicopterCounter = maxHeliNormal;
+        }
+
+        hotDogTruckCounter = maxHotDogNormal; // only one option right now
+        //////////////////
+        //****************
+
+
+
+
         timer = timerStartMinutes * 60;
         health = maxHealth;
     }
@@ -87,13 +159,37 @@ public class GlobalCounterScript : MonoBehaviour
 
         if (currentPercentPoints >= totalPercentPoints * winPercent) //if % destroyed
         {
+            if (gotNeededPercent == false)
+            {
+                if (currentDifficulty == 0)
+                {
+                    currentPoints += 100000;
+                }
+                else if (currentDifficulty == 1)
+                {
+                    currentPoints += 200000;
+                }
+                else if (currentDifficulty == 3)
+                {
+                    currentPoints += 500000;
+                }
+                else if (currentDifficulty == 4)
+                {
+                    currentPoints += 300000;
+                }
+                else  //normal
+                {
+                    currentPoints += 400000;
+                }
+            }
             gotNeededPercent = true; //got needed percent
         }
 
         //timer
         if (won==false && lost == false)
         {
-            timer -= Time.deltaTime;
+            if(currentDifficulty != 0)
+                timer -= Time.deltaTime;
             if(timer <= 0)
             {
                 if (currentPercentPoints >= totalPercentPoints * winPercent && lost == false) //if % destroyed
@@ -106,6 +202,7 @@ public class GlobalCounterScript : MonoBehaviour
                 timer = 0;
             }
         }
+
 
 
         percentDestroyed = ((float)(currentPercentPoints) / (float)(totalPercentPoints))*100;
@@ -147,8 +244,20 @@ public class GlobalCounterScript : MonoBehaviour
             else
                 timeString = "Time: 0" + minleft.ToString() + ":0" + secleft.ToString();
         }
+
+        if(currentDifficulty == 0)  // adjust text if endless
+        {
+            timeString = "Time: --:--";
+        }
+
         timerText.text = timeString;
         timerText2.text = timeString;
+
+
+        if(currentPercentPoints >= totalPercentPoints && lost == false) // finish game if 100% destroyed
+        {
+            won = true;
+        }
 
         if (won == true)
         {
@@ -159,6 +268,7 @@ public class GlobalCounterScript : MonoBehaviour
             //stuff that happens when you win
             //------------------------
             //------------------------
+            endGame();
 
         }
         else
@@ -178,6 +288,7 @@ public class GlobalCounterScript : MonoBehaviour
             //stuff that happens if you lose
             //-------------------------
             //-------------------------
+            endGame();
 
         }
         else
@@ -187,13 +298,92 @@ public class GlobalCounterScript : MonoBehaviour
         }
     }
 
+
+    //currently damage is set to tank=1, heli=2, turret=2;
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        int calculatedDamage;
+
+        if(currentDifficulty == 0) //endless
+        {
+            calculatedDamage = damage;
+        }
+        else if(currentDifficulty == 1) //easy
+        {
+            calculatedDamage = damage;
+        }
+        else if(currentDifficulty == 3) //hard
+        {
+            calculatedDamage = damage + 2;
+        }
+        else if (currentDifficulty == 4) //god
+        {
+            calculatedDamage = damage + 2;
+        }
+        else                     // normal
+        {
+            calculatedDamage = damage + 1;
+        }
+
+        if(won == false && lost == false)
+            health -= calculatedDamage;
+
+        if(health <= 0)
+        {
+            lost = true;
+        }
     }
 
     public void IncreaseHealth(int heal)
     {
-        health += heal;
+        int calculated;
+
+        if(currentDifficulty == 0 || currentDifficulty == 1)
+        {
+            calculated = heal + 6;
+        }
+        else if (currentDifficulty == 3 || currentDifficulty == 4)
+        {
+            calculated = heal;
+        }
+        else // normal
+        {
+            calculated = heal + 3;
+        }
+        
+        health += calculated;
+    }
+
+    public void decreaseSpawnLimit() // to call when base destroyed
+    {
+        if(currentDifficulty == 1)
+        {
+            tankCounter -= 2;
+            helicopterCounter -= 1;
+        }
+        else if(currentDifficulty == 3 || currentDifficulty == 4)
+        {
+            tankCounter -= 3;
+            helicopterCounter -= 2;
+        }
+        else  // normal or endless
+        {
+            tankCounter -= 2;
+            helicopterCounter -= 1;
+        }
+        
+    }
+
+    void endGame() //called after time over or health zero, 
+                   // should stop movement, stop hands from destroying things, and start timer to return to menu 
+    {
+        StartCoroutine(returnToMenu());
+        // ...
+    }
+
+    IEnumerator returnToMenu()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("MainMenu");
     }
 }
