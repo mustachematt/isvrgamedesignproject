@@ -8,17 +8,10 @@ public class TurretDamage : MonoBehaviour
 
     public TurretBehavior turretParent = null;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (transform.parent.tag == "turret")
             turretParent = GetComponentInParent<TurretBehavior>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter(Collider other)

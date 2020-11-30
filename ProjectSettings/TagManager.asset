@@ -17,13 +17,13 @@ TagManager:
   - tank
   - helicopter
   - globalCounter
-  - body
   - head
   - canvas
   - turret
   - tankBulletSpawner
   - radioTower
   - mouth
+  - body
   layers:
   - Default
   - TransparentFX
