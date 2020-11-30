@@ -12,7 +12,6 @@ public class ProjectileBehavior : MonoBehaviour
 
     public GameObject explosion;
 
-    // Start is called before the first frame update
     void Start()
     {
         missleSound = GetComponent<AudioSource>();
@@ -21,7 +20,6 @@ public class ProjectileBehavior : MonoBehaviour
         missleSound.PlayOneShot(missleLaunch, 0.7F);
     }
 
-    // Update is called once per frame
     void Update()
     {
         missleRigidbody.velocity = transform.forward * missleSpeed;

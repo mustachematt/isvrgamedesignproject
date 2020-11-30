@@ -25,6 +25,8 @@ public class HotDogTruck : MonoBehaviour
     int pickGoal;
     int goalDistance = 10;
 
+    bool stopped = false;
+
     GlobalCounterScript spawnLimit;
 
     public int heal;
@@ -52,10 +54,13 @@ public class HotDogTruck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nav1.destination = goTo;
-        if (Vector3.Distance(goTo, transform.position) < goalDistance)
+        if (!stopped)
         {
-            ChooseLocation();
+            nav1.destination = goTo;
+            if (Vector3.Distance(goTo, transform.position) < goalDistance)
+            {
+                ChooseLocation();
+            }
         }
     }
 
@@ -64,7 +69,7 @@ public class HotDogTruck : MonoBehaviour
         if (other.tag == "hand")
             nav1.enabled = false;
 
-        if (other.tag == "mouth")
+        if (other.tag == "head")
         {
             GameObject.Find("GlobalCounter").GetComponent<GlobalCounterScript>().IncreaseHealth(heal);
             spawnLimit.hotDogTruckCounter++;
@@ -105,5 +110,12 @@ public class HotDogTruck : MonoBehaviour
                 goTo = goal9.position;
                 break;
         }
+    }
+
+    public void PickUpTruck()
+    {
+        nav1.enabled = false;
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        stopped = true;
     }
 }

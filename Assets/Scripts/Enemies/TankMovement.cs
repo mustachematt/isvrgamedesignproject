@@ -129,8 +129,6 @@ public class TankMovement : MonoBehaviour
         tankThrowScript.enabled = true;
 
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        rb.GetComponent<Rigidbody>().isKinematic = false;
-        rb.GetComponent<Rigidbody>().useGravity = true;
     }
 
     void ChooseLocation()
