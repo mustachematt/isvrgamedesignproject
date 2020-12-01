@@ -24,7 +24,7 @@ public class TurretBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("body").transform;
 
         shotDelayReset = shotDelay;
         shotDelay = Random.Range(shotDelay, shotDelay + 3.0f) * 60f;
