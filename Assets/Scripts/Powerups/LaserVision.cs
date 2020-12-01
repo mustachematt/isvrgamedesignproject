@@ -11,6 +11,9 @@ public class LaserVision : MonoBehaviour
     public SteamVR_Action_Boolean shoot;
     public SteamVR_Input_Sources rightHand;
 
+    public int currentShotCount;
+
+
     private const float timeBetweenShots = 1;
     private float timer;
     private int shotsTaken;
@@ -44,6 +47,7 @@ public class LaserVision : MonoBehaviour
             reticle.SetActive(false);
             gameObject.GetComponent<LaserVision>().enabled = false;
         }
+        currentShotCount = shotsTaken;
     }
 
 

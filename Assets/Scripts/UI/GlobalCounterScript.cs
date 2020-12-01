@@ -36,8 +36,12 @@ public class GlobalCounterScript : MonoBehaviour
     public GameObject wonText2;
     public GameObject wonText2Back;
 
+    public GameObject powerBar;
+
     public GameObject lostText;
     public GameObject lostTextBack;
+
+    public GameObject powerCounter;
 
     public int totalPercentPoints = 0;  //the total sum of all existing building's points 
     public int currentPercentPoints = 0; //sum of points of buildings destroyed so far, used for percent calculation
@@ -81,6 +85,12 @@ public class GlobalCounterScript : MonoBehaviour
     int maxHeliNormal = 4;
     int maxHeliHard = 8;
     int maxHotDogNormal = 1;
+
+    float powerUpPercent = 0;
+    bool laserIsOn = false;
+    int laserCount = 0;
+    int maxLaser = 15;
+    int LaserRemaining;
 
     void Awake()
     {
@@ -150,8 +160,20 @@ public class GlobalCounterScript : MonoBehaviour
 
     void Update()
     {
+        //---power ups---
+        maxLaser = 15;
+        laserCount = powerCounter.GetComponent<LaserVision>().currentShotCount;
+        laserIsOn = powerCounter.GetComponent<LaserVision>().enabled;
 
-        if(currentPoints > PlayerPrefs.GetInt("highScore", 0))
+        LaserRemaining = maxLaser - laserCount;
+        powerUpPercent = ((float)LaserRemaining / (float)maxLaser) * 100;
+
+        /////adjust bar
+        powerBar.SetActive(laserIsOn);
+        powerBar.GetComponent<Slider>().value = powerUpPercent;
+        //------
+
+        if (currentPoints > PlayerPrefs.GetInt("highScore", 0))
             PlayerPrefs.SetInt("highScore", currentPoints);
 
         if (health > maxHealth)  //don't let heath go above starting health (for when regaining health)
