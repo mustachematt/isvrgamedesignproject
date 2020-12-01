@@ -31,20 +31,6 @@ public class DisplayTooltip : MonoBehaviour
         ControllerButtonHints.HideButtonHint(handScript, action);
         ControllerButtonHints.HideTextHint(handScript, action);
     }
-    private Hand HandHoveringObject()
-    {
-        // Assumes at least one of the hands is hovering an object
-        if (rightHandScript.hoveringInteractable != null)
-            return rightHandScript;
-        return leftHandScript;
-    }
-    private Hand HandHoldingObject()
-    {
-        // Assumes at least one of the hands is holding an object.
-        if (rightHandScript.currentAttachedObject != null)
-            return rightHandScript;
-        return leftHandScript;
-    }
 
 
     //-----------------------------------
@@ -52,21 +38,21 @@ public class DisplayTooltip : MonoBehaviour
     // to instruct the player how to grab cars, tanks, etc.
     // and also to throw them
     //
-    public void HighlightSqueezeHover()
+    public void HighlightSqueezeHover(Hand hand)
     {
-        ShowHint(HandHoveringObject(), SteamVR_Input.GetSingleAction("Squeeze"), "Pick up");
+        ShowHint(hand, SteamVR_Input.GetSingleAction("Squeeze"), "Pick up");
     }
-    public void UnhighlightSqueezeHover()
+    public void UnhighlightSqueezeHover(Hand hand)
     {
-        HideHint(HandHoveringObject(), SteamVR_Input.GetSingleAction("Squeeze"));
+        HideHint(hand, SteamVR_Input.GetSingleAction("Squeeze"));
     }
-    public void HighlightSqueezeHolding()
+    public void HighlightSqueezeHolding(Hand hand)
     {
-        ShowHint(HandHoldingObject(), SteamVR_Input.GetSingleAction("Squeeze"), "Release to drop/throw");
+        ShowHint(hand, SteamVR_Input.GetSingleAction("Squeeze"), "Release to drop/throw");
     }
-    public void UnhighlightSqueezeHolding()
+    public void UnhighlightSqueezeHolding(Hand hand)
     {
-        HideHint(HandHoldingObject(), SteamVR_Input.GetSingleAction("Squeeze"));
+        HideHint(hand, SteamVR_Input.GetSingleAction("Squeeze"));
     }
 
 
@@ -109,5 +95,17 @@ public class DisplayTooltip : MonoBehaviour
     public void UnhighlightGrabGrip()
     {
         HideHint(rightHandScript, SteamVR_Input.GetBooleanAction("GrabGrip"));
+    }
+
+
+    //-----------------------------------
+    // In the event that all hints need to be cleared
+    //
+    public void ClearAllHints()
+    {
+        ControllerButtonHints.HideAllButtonHints(rightHandScript);
+        ControllerButtonHints.HideAllButtonHints(leftHandScript);
+        ControllerButtonHints.HideAllTextHints(rightHandScript);
+        ControllerButtonHints.HideAllTextHints(leftHandScript);
     }
 }
