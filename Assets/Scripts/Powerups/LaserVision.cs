@@ -7,7 +7,7 @@ public class LaserVision : MonoBehaviour
 {
     public const int shotLimit = 15;
     public LayerMask mask;
-    public GameObject line, explosion, tooltipObj;
+    public GameObject line, explosion, tooltipObj, reticle;
     public SteamVR_Action_Boolean shoot;
     public SteamVR_Input_Sources rightHand;
 
@@ -34,6 +34,7 @@ public class LaserVision : MonoBehaviour
         timer = timeBetweenShots;
 
         dt = tooltipObj.GetComponent<DisplayTooltip>();
+        reticle.SetActive(true);
         StartCoroutine(ShowHint());
     }
 
@@ -42,8 +43,10 @@ public class LaserVision : MonoBehaviour
     {
         timer -= Time.deltaTime;
         if (shotsTaken >= 15)
+        {
+            reticle.SetActive(false);
             gameObject.GetComponent<LaserVision>().enabled = false;
-
+        }
         currentShotCount = shotsTaken;
     }
 

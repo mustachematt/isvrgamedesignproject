@@ -22,7 +22,7 @@ public class BuildingCollision : MonoBehaviour
     float tempSinkDistance;
     public float sinkSpeed;
 
-    int hitCount;
+    public int hitCount;
     public int destructionNum;
 
 
