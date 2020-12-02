@@ -4,34 +4,44 @@ using UnityEngine;
 
 public class RadioTowerPowerupDrop : MonoBehaviour
 {
-    BuildingCollision radioTower;
+    public GameObject[] radioTowerPos;
+    public Vector3[] originPos;
+    Vector3 pickupPos;
 
-    Vector3 originPosition;
-    Vector3 pickupPosition;
+    public bool[] hasSpawned;
 
     public GameObject pickup;
 
     public float setHeight;
 
-    bool hasSpawned;
+
 
 
     void Start()
     {
-        hasSpawned = false;
-        originPosition = transform.position;
-        radioTower = GetComponent<BuildingCollision>();
+        originPos = new Vector3[radioTowerPos.Length];
+        hasSpawned = new bool[radioTowerPos.Length];
+
+        for (int i = 0; i < radioTowerPos.Length; ++i)
+        {
+            originPos[i] = new Vector3(radioTowerPos[i].transform.position.x,
+                                        radioTowerPos[i].transform.position.y,
+                                        radioTowerPos[i].transform.position.z);
+            hasSpawned[i] = false;
+        }
     }
 
     void Update()
     {
-        if ((radioTower.hitCount >= radioTower.destructionNum) && !hasSpawned)
+        for (int i = 0; i < radioTowerPos.Length; i++)
         {
-            originPosition = transform.position;
-            pickupPosition = new Vector3(originPosition.x, setHeight, originPosition.z);
-            Instantiate(pickup, pickupPosition, Quaternion.identity);
+            if (radioTowerPos[i] == null && hasSpawned[i] == false)
+            {
+                pickupPos = new Vector3(originPos[i].x, setHeight, originPos[i].z);
+                Instantiate(pickup, pickupPos, Quaternion.identity);
 
-            hasSpawned = true;
+                hasSpawned[i] = true;
+            }
         }
     }
 }
