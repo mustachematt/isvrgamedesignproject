@@ -6,11 +6,20 @@ using Valve.VR.InteractionSystem;
 // Is a child class of Interactible to override its virtual functions
 public class LaserVisionObject : Interactable
 {
-    public GameObject powerupManager, pickupEffect;
+    public GameObject pickupEffect;
+    private GameObject powerupManager;
+
+
+    protected override void Start()
+    {
+        base.Start();
+        powerupManager = GameObject.Find("PowerupManager");
+    }
 
 
     protected override void Update()
     {
+        base.Start();
         transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
     }
 
@@ -19,7 +28,6 @@ public class LaserVisionObject : Interactable
     {
         base.OnHandHoverBegin(hand);
         powerupManager.GetComponent<LaserVision>().enabled = true;
-        Instantiate(pickupEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

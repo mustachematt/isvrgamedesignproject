@@ -38,7 +38,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8251279750004430311}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9f5a41f127044e45ac9f57371988845, type: 3}
   m_Name: 
@@ -50,7 +50,9 @@ MonoBehaviour:
   explosion: {fileID: 422661824320796535, guid: 0b417c02052f8834d9434b21e3d9deec,
     type: 3}
   tooltipObj: {fileID: 0}
+  reticle: {fileID: 0}
   shoot:
     actionPath: /actions/default/in/GrabGrip
     needsReinit: 0
   rightHand: 2
+  currentShotCount: 0

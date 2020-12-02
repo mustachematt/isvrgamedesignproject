@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1055282596119105760}
   - component: {fileID: 1055282596119105761}
   - component: {fileID: 1055282596119105766}
-  - component: {fileID: 1055282596119105773}
   - component: {fileID: 1055282596119105772}
   m_Layer: 0
   m_Name: PowerupLaserVision
@@ -33,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 6.63, y: -47, z: 51.32}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
-  - {fileID: 2153276739161251225}
+  - {fileID: 6240886347421838326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 040d3257ad267fd4694715951e278c2a, type: 2}
+  - {fileID: 2100000, guid: 7453d8c7e9da1e84083018cd236207d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,64 +147,7 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
-  powerupManager: {fileID: 8251279750004430311, guid: a678c37f84f992741a206cf0a2ac3ff1,
-    type: 3}
-  pickupEffect: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
---- !u!114 &1055282596119105773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055282596119105767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attachmentFlags: 44
-  attachmentOffset: {fileID: 0}
-  catchingSpeedThreshold: -1
-  releaseVelocityStyle: 1
-  releaseVelocityTimeOffset: -0.011
-  scaleReleaseVelocity: 1.1
-  scaleReleaseVelocityThreshold: -1
-  scaleReleaseVelocityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  restoreOriginalParent: 0
-  attached: 0
-  onPickUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onDetachFromHand:
-    m_PersistentCalls:
-      m_Calls: []
-  onHeldUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  interactable: {fileID: 0}
+  pickupEffect: {fileID: 6240886347422136278}
 --- !u!54 &1055282596119105772
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -222,7 +164,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &2153276739161638681
+--- !u!1001 &6240886347422232950
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -239,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -278,11 +220,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
-      propertyPath: m_LocalScale.x
+      propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
-      propertyPath: m_LocalScale.y
+      propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
@@ -291,9 +233,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
---- !u!4 &2153276739161251225 stripped
+--- !u!1 &6240886347422136278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 77ec3c4e07a36814fb3169ecef41b50a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6240886347422232950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6240886347421838326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 77ec3c4e07a36814fb3169ecef41b50a,
     type: 3}
-  m_PrefabInstance: {fileID: 2153276739161638681}
+  m_PrefabInstance: {fileID: 6240886347422232950}
   m_PrefabAsset: {fileID: 0}

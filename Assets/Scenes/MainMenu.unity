@@ -611,12 +611,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18c4f979ade96b47a5609816acfcdbd, type: 3}
 --- !u!4 &183093776 stripped
@@ -764,12 +764,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661a485f751541d49bc7c465bb8d7386, type: 3}
 --- !u!4 &265426125 stripped
@@ -949,12 +949,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315dff9ed60d72c489d50a0ee754a404, type: 3}
 --- !u!4 &306580804 stripped
@@ -1293,12 +1293,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d731e0344dec6414bbfe92c6f31bb6b1, type: 3}
 --- !u!4 &374434700 stripped
@@ -1685,6 +1685,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 507372211}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &532076436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 164440631, guid: 7b8edb3c531581b458f26cd68e5c5bac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1243673640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54baab8b44281484a8f3d5950089883e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &551541463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2026,12 +2038,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18c4f979ade96b47a5609816acfcdbd, type: 3}
 --- !u!4 &591415728 stripped
@@ -2257,8 +2269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 1243673644}
-  velocityCheck2: {fileID: 1243673643}
+  velocityCheck1: {fileID: 532076436}
+  velocityCheck2: {fileID: 1727073878}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -2268,6 +2280,7 @@ MonoBehaviour:
   shakeRange: 700
   sinkDistance: 200
   sinkSpeed: 2
+  hitCount: 0
   destructionNum: 2
   buildingHit: 0
   isShaking: 0
@@ -2470,12 +2483,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab, type: 3}
 --- !u!4 &663141718 stripped
@@ -2560,12 +2573,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18d0b10bfdf822a48ba9a0134aa328ed, type: 3}
 --- !u!4 &664691217 stripped
@@ -3141,12 +3154,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18d0b10bfdf822a48ba9a0134aa328ed, type: 3}
 --- !u!4 &849300287 stripped
@@ -3226,12 +3239,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 2263262470887816381, guid: 491b20c662eedbe45824f675f7c41aa2,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 491b20c662eedbe45824f675f7c41aa2, type: 3}
 --- !u!4 &891031738 stripped
@@ -3431,8 +3444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 1243673644}
-  velocityCheck2: {fileID: 1243673643}
+  velocityCheck1: {fileID: 532076436}
+  velocityCheck2: {fileID: 1727073878}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -3442,6 +3455,7 @@ MonoBehaviour:
   shakeRange: 700
   sinkDistance: 200
   sinkSpeed: 2
+  hitCount: 0
   destructionNum: 2
   buildingHit: 0
   isShaking: 0
@@ -3576,12 +3590,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18c4f979ade96b47a5609816acfcdbd, type: 3}
 --- !u!4 &1075491163 stripped
@@ -3760,8 +3774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 1243673644}
-  velocityCheck2: {fileID: 1243673643}
+  velocityCheck1: {fileID: 532076436}
+  velocityCheck2: {fileID: 1727073878}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -3771,6 +3785,7 @@ MonoBehaviour:
   shakeRange: 700
   sinkDistance: 200
   sinkSpeed: 2
+  hitCount: 0
   destructionNum: 2
   buildingHit: 0
   isShaking: 0
@@ -3991,12 +4006,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 5298573626788600175, guid: 15dc58e4975dd3646a9c96b3905a8e31,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15dc58e4975dd3646a9c96b3905a8e31, type: 3}
 --- !u!4 &1196761698 stripped
@@ -4372,12 +4387,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d731e0344dec6414bbfe92c6f31bb6b1, type: 3}
 --- !u!4 &1232534200 stripped
@@ -4453,32 +4468,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1569254257, guid: 7b8edb3c531581b458f26cd68e5c5bac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164440633, guid: 7b8edb3c531581b458f26cd68e5c5bac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030061850, guid: 7b8edb3c531581b458f26cd68e5c5bac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b8edb3c531581b458f26cd68e5c5bac, type: 3}
---- !u!114 &1243673643 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1243673643, guid: 7b8edb3c531581b458f26cd68e5c5bac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1243673640}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54baab8b44281484a8f3d5950089883e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1243673644 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1243673644, guid: 7b8edb3c531581b458f26cd68e5c5bac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1243673640}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54baab8b44281484a8f3d5950089883e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1273106553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4550,12 +4553,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 6396192009682396311, guid: d1cbde8305f16b8448c6556c87db24ca,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1cbde8305f16b8448c6556c87db24ca, type: 3}
 --- !u!4 &1273106554 stripped
@@ -4708,12 +4711,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d731e0344dec6414bbfe92c6f31bb6b1, type: 3}
 --- !u!4 &1285008624 stripped
@@ -4919,12 +4922,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315dff9ed60d72c489d50a0ee754a404, type: 3}
 --- !u!4 &1321277416 stripped
@@ -5193,12 +5196,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab, type: 3}
 --- !u!4 &1359806587 stripped
@@ -5341,12 +5344,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f735608373b26a14e84ff396aab097ee, type: 3}
 --- !u!4 &1418437557 stripped
@@ -5552,12 +5555,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 5410886100784268070, guid: 38d1b7120f036094491ca3910a5721b3,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d1b7120f036094491ca3910a5721b3, type: 3}
 --- !u!4 &1501221289 stripped
@@ -5642,12 +5645,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab, type: 3}
 --- !u!4 &1509655196 stripped
@@ -5976,12 +5979,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab, type: 3}
 --- !u!4 &1571714680 stripped
@@ -6038,8 +6041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 1243673644}
-  velocityCheck2: {fileID: 1243673643}
+  velocityCheck1: {fileID: 532076436}
+  velocityCheck2: {fileID: 1727073878}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -6049,6 +6052,7 @@ MonoBehaviour:
   shakeRange: 700
   sinkDistance: 200
   sinkSpeed: 2
+  hitCount: 0
   destructionNum: 2
   buildingHit: 0
   isShaking: 0
@@ -6289,12 +6293,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f735608373b26a14e84ff396aab097ee, type: 3}
 --- !u!4 &1656805963 stripped
@@ -6487,6 +6491,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1727073878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 164440630, guid: 7b8edb3c531581b458f26cd68e5c5bac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1243673640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54baab8b44281484a8f3d5950089883e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1743020417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7446,8 +7462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 1243673644}
-  velocityCheck2: {fileID: 1243673643}
+  velocityCheck1: {fileID: 532076436}
+  velocityCheck2: {fileID: 1727073878}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -7457,6 +7473,7 @@ MonoBehaviour:
   shakeRange: 700
   sinkDistance: 200
   sinkSpeed: 2
+  hitCount: 0
   destructionNum: 2
   buildingHit: 0
   isShaking: 0
@@ -7596,12 +7613,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661a485f751541d49bc7c465bb8d7386, type: 3}
 --- !u!4 &2007102579 stripped
@@ -7754,12 +7771,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 280595387078061169, guid: 03f1f26403f1e02429c9419162c5b4c5,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f1f26403f1e02429c9419162c5b4c5, type: 3}
 --- !u!4 &2031676982 stripped
@@ -8066,12 +8083,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f735608373b26a14e84ff396aab097ee, type: 3}
 --- !u!4 &2129545261 stripped
@@ -8151,12 +8168,12 @@ PrefabInstance:
         type: 3}
       propertyPath: velocityCheck1
       value: 
-      objectReference: {fileID: 1243673644}
+      objectReference: {fileID: 532076436}
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
       value: 
-      objectReference: {fileID: 1243673643}
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18c4f979ade96b47a5609816acfcdbd, type: 3}
 --- !u!4 &2135030624 stripped

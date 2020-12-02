@@ -127,8 +127,7 @@ public class TankMovement : MonoBehaviour
         nav1.enabled = false;
         bulletMaker.SetActive(false);
         tankThrowScript.enabled = true;
-
-        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        gameObject.GetComponent<TankMovement>().enabled = false;
     }
 
     void ChooseLocation()
