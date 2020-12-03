@@ -66,7 +66,7 @@ public class LaserVision : MonoBehaviour
         if (Physics.Raycast(line.transform.position, line.transform.forward, out hit, 100, mask))
         {
             // instantiate the explosion and move it to where the laser hit
-            GameObject instance = Instantiate(explosion, gameObject.transform);
+            GameObject instance = Instantiate(explosion, gameObject.transform.position, Quaternion.Euler(90, 0, 0));
             instance.transform.position = hit.transform.position;
         }
         ++shotsTaken;
