@@ -148,8 +148,9 @@ MonoBehaviour:
   shakeIntensity: 150
   shakeRange: 700
   sinkDistance: 200
-  sinkSpeed: 2
-  destructionNum: 2
+  sinkSpeed: 3
+  hitCount: 0
+  destructionNum: 1
   buildingHit: 0
   isShaking: 0
   fireOn: 0
