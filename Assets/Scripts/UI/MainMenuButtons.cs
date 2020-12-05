@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    public GameObject loadLevelManager;
     public bool playHit = false, quitHit = false;
 
 
-    IEnumerator ChangeToScene(int scene)
+    IEnumerator ChangeToScene(string scene)
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(scene);
+        loadLevelManager.GetComponent<SteamVR_LoadLevel>().levelName = scene;
+        loadLevelManager.SetActive(true);
     }
 
     
@@ -26,7 +29,7 @@ public class MainMenuButtons : MonoBehaviour
     {
         if (playHit)
         {
-            StartCoroutine(ChangeToScene(1));
+            StartCoroutine(ChangeToScene("landscape"));
             playHit = false; // so there's only 1 invocation
         }
 

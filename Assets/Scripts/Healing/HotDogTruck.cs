@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Valve.VR.InteractionSystem;
 
 public class HotDogTruck : MonoBehaviour
 {
@@ -51,10 +52,9 @@ public class HotDogTruck : MonoBehaviour
         ChooseLocation();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!stopped)
+        if (nav1.enabled) // is moving
         {
             nav1.destination = goTo;
             if (Vector3.Distance(goTo, transform.position) < goalDistance)
@@ -73,8 +73,19 @@ public class HotDogTruck : MonoBehaviour
         {
             GameObject.Find("GlobalCounter").GetComponent<GlobalCounterScript>().IncreaseHealth(heal);
             spawnLimit.hotDogTruckCounter++;
+
+            Hand holdingHand = gameObject.GetComponent<ThrowableTooltips>().attachedToHand;
+            if (holdingHand == true)
+                holdingHand.DetachObject(gameObject);
+
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "body")
+            nav1.enabled = false;
     }
 
     void ChooseLocation()
@@ -116,6 +127,5 @@ public class HotDogTruck : MonoBehaviour
     {
         nav1.enabled = false;
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
-        stopped = true;
     }
 }
