@@ -24,6 +24,7 @@ TagManager:
   - radioTower
   - mouth
   - body
+  - militaryBase
   layers:
   - Default
   - TransparentFX

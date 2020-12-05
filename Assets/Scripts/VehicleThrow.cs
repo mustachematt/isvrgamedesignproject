@@ -69,6 +69,10 @@ public class VehicleThrow : MonoBehaviour
         {
             return true;
         }
+        else if (myTag == "militaryBase")
+        {
+            return true;
+        }
         else
         {
             return false;

@@ -63,6 +63,7 @@ public class TankThrow : MonoBehaviour
             case "gas station":
             case "vehicle":
             case "helicopter":
+            case "militaryBase":
                 return true;
             default:
                 return false;
