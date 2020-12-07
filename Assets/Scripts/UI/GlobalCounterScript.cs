@@ -131,10 +131,17 @@ public class GlobalCounterScript : MonoBehaviour
             tankCounter = maxTankEasy;
             helicopterCounter = maxHeliEasy;
         }
-        else if (currentDifficulty == 3 || currentDifficulty == 4)
+        else if (currentDifficulty == 3)
         {
             winPercent = 0.8f;
             timerStartMinutes = 20;
+            tankCounter = maxTankHard;
+            helicopterCounter = maxHeliHard;
+        }
+        else if (currentDifficulty == 4)
+        {
+            winPercent = 0.8f;
+            timerStartMinutes = 15;
             tankCounter = maxTankHard;
             helicopterCounter = maxHeliHard;
         }
@@ -197,7 +204,7 @@ public class GlobalCounterScript : MonoBehaviour
                 }
                 else if (currentDifficulty == 4)
                 {
-                    currentPoints += 300000;
+                    currentPoints += 500000;
                 }
                 else  //normal
                 {
@@ -252,7 +259,7 @@ public class GlobalCounterScript : MonoBehaviour
 
 
         string timeString;
-        if (minleft > 10)
+        if (minleft >= 10)
         {
             if (secleft >= 10)
                 timeString = "Time: " + minleft.ToString() + ":" + secleft.ToString();
@@ -287,6 +294,13 @@ public class GlobalCounterScript : MonoBehaviour
             wonText1Back.SetActive(true);
             wonText2.SetActive(true);
             wonText2Back.SetActive(true);
+            if(currentDifficulty == 3)
+            {
+                PlayerPrefs.SetInt("beatnormal", 1);
+                PlayerPrefs.SetInt("beathard", 1);
+            }
+            else if(currentDifficulty == 2)
+                PlayerPrefs.SetInt("beatnormal", 1);
             //stuff that happens when you win
             //------------------------
             //------------------------
