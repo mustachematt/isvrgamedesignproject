@@ -161,7 +161,8 @@ public class TankMovement : MonoBehaviour
         spawnLimit.tankCounter++;
         Instantiate(explosionLarge, transform.position, Quaternion.identity);
         GameObject.FindWithTag("globalCounter").GetComponent<GlobalCounterScript>().currentPoints += tankPointValue;
-        gameObject.GetComponent<ThrowableTooltips>().attachedToHand.DetachObject(gameObject);
+        if (gameObject.GetComponent<ThrowableTooltips>().attachedToHand)
+            gameObject.GetComponent<ThrowableTooltips>().attachedToHand.DetachObject(gameObject);
         Destroy(gameObject);     
     }
 }
