@@ -70,6 +70,10 @@ public class LaserVision : MonoBehaviour
             instance.transform.position = hit.transform.position;
         }
         ++shotsTaken;
+        if(PlayerPrefs.GetInt("difficulty", 2) == 4)
+        {
+            shotsTaken = 0;
+        }
     }
 
 
