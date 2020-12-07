@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Valve.VR;
 
 public class PlayerMove : MonoBehaviour
@@ -68,5 +69,12 @@ public class PlayerMove : MonoBehaviour
         }
 
         walkVector = Vector3.zero; // reset the walk vector
+    }
+
+
+    private void OnDisable()
+    {
+        source.loop = false;
+        walk.RemoveOnAxisListener(GetWalkDirection, rightHand);
     }
 }

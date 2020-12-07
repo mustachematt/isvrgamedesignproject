@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class GlobalCounterScript : MonoBehaviour
 
@@ -42,6 +43,8 @@ public class GlobalCounterScript : MonoBehaviour
     public GameObject lostTextBack;
 
     public GameObject powerCounter;
+
+    public GameObject loadLevelManager;
 
     public int totalPercentPoints = 0;  //the total sum of all existing building's points 
     public int currentPercentPoints = 0; //sum of points of buildings destroyed so far, used for percent calculation
@@ -414,12 +417,14 @@ public class GlobalCounterScript : MonoBehaviour
                    // should stop movement, stop hands from destroying things, and start timer to return to menu 
     {
         StartCoroutine(returnToMenu());
-        // ...
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerMove>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
     }
 
     IEnumerator returnToMenu()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("MainMenu");
+        loadLevelManager.SetActive(true);
     }
 }
