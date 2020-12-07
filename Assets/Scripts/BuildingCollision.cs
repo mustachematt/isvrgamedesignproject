@@ -37,7 +37,14 @@ public class BuildingCollision : MonoBehaviour
         fireLocation = new Vector3(transform.position.x, 20f, transform.position.z);
     }
 
-     void FixedUpdate()
+    void Awake()
+    {
+        tempSinkDistance = sinkDistance;
+        originPosition = transform.position;
+        fireLocation = new Vector3(transform.position.x, 20f, transform.position.z);
+    }
+
+    void FixedUpdate()
     {
         // Makes a building shake and sink into the ground
         if (isShaking)
@@ -73,7 +80,7 @@ public class BuildingCollision : MonoBehaviour
     {
         if ((other.tag == "hand" && (velocityCheck1.speed >= 4 || velocityCheck2.speed >= 4)) || other.tag == "explosion")
         {
-            if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag ==  "radioTower")
+            if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag ==  "radioTower" || gameObject.tag == "militaryBase")
             {
                 if(buildingHit == false)
                     SkyscraperHit(other.transform.position);
@@ -89,7 +96,7 @@ public class BuildingCollision : MonoBehaviour
     {
         if(other.gameObject.tag == "vehicle" || other.gameObject.tag == "tank")
         {
-            if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag == "radioTower")
+            if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag == "radioTower" || gameObject.tag == "militaryBase")
             {
                 if (buildingHit == false)
                     SkyscraperHit(other.transform.position);
