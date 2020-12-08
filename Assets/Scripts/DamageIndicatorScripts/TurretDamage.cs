@@ -12,6 +12,8 @@ public class TurretDamage : MonoBehaviour
     {
         if (transform.parent.tag == "turret")
             turretParent = GetComponentInParent<TurretBehavior>();
+
+        transform.parent = null;
     }
 
     void OnTriggerEnter(Collider other)
