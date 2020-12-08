@@ -12,6 +12,8 @@ public class HelicopterDamage : MonoBehaviour
     {
         if (transform.parent.tag == "helicopter")
             heliParent = GetComponentInParent<HelicopterMovement>();
+
+        transform.parent = null;
     }
 
     void OnTriggerEnter(Collider other)
