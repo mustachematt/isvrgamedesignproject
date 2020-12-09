@@ -38,6 +38,10 @@ public class TurretBehavior : MonoBehaviour
 
             transform.LookAt(player);
 
+            transform.eulerAngles = new Vector3(Mathf.Clamp(transform.eulerAngles.x, -30, 0),
+                                      transform.eulerAngles.y,
+                                      0);
+
             if ((Vector3.Distance(player.position, transform.position) > playerRadius))
             {
                 shoot = !shoot;
@@ -59,6 +63,10 @@ public class TurretBehavior : MonoBehaviour
         else
         {
             transform.LookAt(player);
+
+            transform.eulerAngles = new Vector3(Mathf.Clamp(transform.eulerAngles.x, -30, 0),
+                          transform.eulerAngles.y,
+                          0);
 
             if ((Vector3.Distance(player.position, transform.position) < playerRadius))
             {
