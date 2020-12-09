@@ -128,6 +128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   turretParent: {fileID: 0}
+  hapticAction:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
 --- !u!114 &6890831372823192292
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -183,6 +183,98 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 19340634}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &26997063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26997064}
+  - component: {fileID: 26997067}
+  - component: {fileID: 26997066}
+  - component: {fileID: 26997065}
+  m_Layer: 0
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26997064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26997063}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0032, y: -0.529, z: -0.38000107}
+  m_LocalScale: {x: 1.0095437, y: 0.0625, z: 2}
+  m_Children: []
+  m_Father: {fileID: 239723363}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &26997065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26997063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &26997066
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26997063}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fa39af07714e7de459247cb99c6f50d9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &26997067
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26997063}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &39965373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,8 +495,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124753690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48923075, y: 0.0012505054, z: -0.38000107}
-  m_LocalScale: {x: 0.03846154, y: 1.0625, z: 2}
+  m_LocalPosition: {x: -0.48923075, y: 0.0168, z: -0.38000107}
+  m_LocalScale: {x: 0.03846154, y: 1.0289946, z: 2}
   m_Children: []
   m_Father: {fileID: 239723363}
   m_RootOrder: 1
@@ -672,7 +764,7 @@ PrefabInstance:
     - target: {fileID: 8269419394417782832, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8269419394417782832, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
@@ -707,6 +799,21 @@ PrefabInstance:
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -748,7 +855,7 @@ Transform:
   - {fileID: 124753691}
   - {fileID: 1841245684}
   - {fileID: 1646441776}
-  - {fileID: 2096118817}
+  - {fileID: 26997064}
   - {fileID: 1385068340}
   m_Father: {fileID: 863027358}
   m_RootOrder: 0
@@ -866,7 +973,7 @@ PrefabInstance:
     - target: {fileID: 1943550861183018145, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1943550861183018145, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
@@ -896,6 +1003,21 @@ PrefabInstance:
     - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -974,7 +1096,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &276435291
 GameObject:
@@ -989,7 +1111,7 @@ GameObject:
   - component: {fileID: 276435293}
   - component: {fileID: 276435292}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameTitleCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1062,14 +1184,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276435291}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 3.5}
   m_LocalScale: {x: 0.005, y: 0.005, z: 1}
   m_Children:
   - {fileID: 332662305}
   - {fileID: 1750495397}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 815323908}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1126,7 +1248,7 @@ PrefabInstance:
     - target: {fileID: 356776372436596997, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 356776372436596997, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
@@ -1151,6 +1273,21 @@ PrefabInstance:
     - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -1410,6 +1547,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352805352}
   m_CullTransparentMesh: 0
+--- !u!1001 &371676462
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2069411082}
+    m_Modifications:
+    - target: {fileID: 5955286405774717311, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_Name
+      value: building_7 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.60000026
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheck1
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheckR
+      value: 
+      objectReference: {fileID: 1727073878}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18d0b10bfdf822a48ba9a0134aa328ed, type: 3}
+--- !u!4 &371676463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 371676462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &374434699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1460,7 +1702,7 @@ PrefabInstance:
     - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
@@ -1495,6 +1737,21 @@ PrefabInstance:
     - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -1667,6 +1924,98 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &437620809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437620810}
+  - component: {fileID: 437620813}
+  - component: {fileID: 437620812}
+  - component: {fileID: 437620811}
+  m_Layer: 0
+  m_Name: Cube (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437620810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437620809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -0.7292, z: -0.38000107}
+  m_LocalScale: {x: 0.06923077, y: 0.51655495, z: 1.8000001}
+  m_Children: []
+  m_Father: {fileID: 1638655083}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &437620811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437620809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &437620812
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437620809}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f7d8c0abc21b5da4791d4f37ad562036, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &437620813
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437620809}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &439311629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2396,7 +2745,7 @@ PrefabInstance:
     - target: {fileID: 8269419394417782832, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8269419394417782832, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
@@ -2431,6 +2780,21 @@ PrefabInstance:
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -2819,7 +3183,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -2849,6 +3213,21 @@ PrefabInstance:
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -2909,7 +3288,7 @@ PrefabInstance:
     - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
@@ -2939,6 +3318,21 @@ PrefabInstance:
     - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -3315,7 +3709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 2, y: -1}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!114 &765180991
 MonoBehaviour:
@@ -3338,7 +3732,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
     m_FontSize: 120
-    m_FontStyle: 2
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 128
@@ -3493,6 +3887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815323908}
   - component: {fileID: 815323909}
+  - component: {fileID: 815323910}
   m_Layer: 0
   m_Name: MenuButtons
   m_TagString: Untagged
@@ -3508,7 +3903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815323907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1086841040}
@@ -3518,6 +3913,7 @@ Transform:
   - {fileID: 614220900}
   - {fileID: 2103229830}
   - {fileID: 1815724812}
+  - {fileID: 276435295}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3536,6 +3932,19 @@ MonoBehaviour:
   loadLevelManager: {fileID: 275206437}
   playHit: 0
   quitHit: 0
+--- !u!114 &815323910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815323907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b52b8ccedb379342afdf5158ab7034d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrCamera: {fileID: 1637263479}
 --- !u!1001 &835182103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3551,7 +3960,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.83
+      value: 10.6
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -3561,7 +3970,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.43
+      value: 11.41
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -3571,7 +3980,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -3581,12 +3990,12 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -3596,7 +4005,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -3616,6 +4025,21 @@ PrefabInstance:
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -3676,7 +4100,7 @@ PrefabInstance:
     - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5955286405775079333, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
@@ -3706,6 +4130,21 @@ PrefabInstance:
     - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 5955286404642433604, guid: 18d0b10bfdf822a48ba9a0134aa328ed,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -3746,7 +4185,7 @@ Transform:
   - {fileID: 239723363}
   - {fileID: 1638655083}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &891031737
 PrefabInstance:
@@ -3825,6 +4264,21 @@ PrefabInstance:
       propertyPath: velocityCheck2
       value: 
       objectReference: {fileID: 1727073878}
+    - target: {fileID: 2263262470887816381, guid: 491b20c662eedbe45824f675f7c41aa2,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263262470887816381, guid: 491b20c662eedbe45824f675f7c41aa2,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 2263262470887816381, guid: 491b20c662eedbe45824f675f7c41aa2,
+        type: 3}
+      propertyPath: velocityCheckR
+      value: 
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 491b20c662eedbe45824f675f7c41aa2, type: 3}
 --- !u!4 &891031738 stripped
@@ -3896,7 +4350,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 905955518}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &932501120
+--- !u!1 &940502995
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3904,90 +4358,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 932501121}
-  - component: {fileID: 932501124}
-  - component: {fileID: 932501123}
-  - component: {fileID: 932501122}
-  m_Layer: 0
-  m_Name: Cube (5)
+  - component: {fileID: 940502996}
+  - component: {fileID: 940502998}
+  - component: {fileID: 940502997}
+  m_Layer: 5
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &932501121
-Transform:
+--- !u!224 &940502996
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932501120}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.673, y: -0.74374974, z: -0.38000107}
-  m_LocalScale: {x: 0.06923077, y: 0.48749998, z: 1.8000001}
+  m_GameObject: {fileID: 940502995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1638655083}
-  m_RootOrder: 0
+  m_Father: {fileID: 1385068340}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &932501122
-BoxCollider:
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 128}
+  m_SizeDelta: {x: 864, y: 8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &940502997
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932501120}
+  m_GameObject: {fileID: 940502995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &932501123
-MeshRenderer:
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &940502998
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932501120}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: f7d8c0abc21b5da4791d4f37ad562036, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &932501124
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932501120}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 940502995}
+  m_CullTransparentMesh: 0
 --- !u!1001 &980860186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4105,8 +4540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -1}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!114 &1010823631
 MonoBehaviour:
@@ -4127,12 +4562,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 48
-    m_FontStyle: 3
+    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    m_FontSize: 64
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 48
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -4334,6 +4769,21 @@ PrefabInstance:
       propertyPath: velocityCheck2
       value: 
       objectReference: {fileID: 1727073878}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckR
+      value: 
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18c4f979ade96b47a5609816acfcdbd, type: 3}
 --- !u!4 &1075491163 stripped
@@ -4512,8 +4962,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 532076436}
-  velocityCheck2: {fileID: 1727073878}
+  hapticAction:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  velocityCheckL: {fileID: 532076436}
+  velocityCheckR: {fileID: 1727073878}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -4822,7 +5275,7 @@ PrefabInstance:
     - target: {fileID: 5298573626788525984, guid: 15dc58e4975dd3646a9c96b3905a8e31,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5298573626788525984, guid: 15dc58e4975dd3646a9c96b3905a8e31,
         type: 3}
@@ -4847,6 +5300,21 @@ PrefabInstance:
     - target: {fileID: 5298573626788600175, guid: 15dc58e4975dd3646a9c96b3905a8e31,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 5298573626788600175, guid: 15dc58e4975dd3646a9c96b3905a8e31,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298573626788600175, guid: 15dc58e4975dd3646a9c96b3905a8e31,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 5298573626788600175, guid: 15dc58e4975dd3646a9c96b3905a8e31,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -5143,101 +5611,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1224568130}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1232534199
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2069411082}
-    m_Modifications:
-    - target: {fileID: 6404696129086747375, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_Name
-      value: building_9 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.20000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.40000024
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: velocityCheck1
-      value: 
-      objectReference: {fileID: 532076436}
-    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-        type: 3}
-      propertyPath: velocityCheck2
-      value: 
-      objectReference: {fileID: 1727073878}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d731e0344dec6414bbfe92c6f31bb6b1, type: 3}
---- !u!4 &1232534200 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1232534199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1243673640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5401,6 +5774,21 @@ PrefabInstance:
       propertyPath: velocityCheck2
       value: 
       objectReference: {fileID: 1727073878}
+    - target: {fileID: 6396192009682396311, guid: d1cbde8305f16b8448c6556c87db24ca,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6396192009682396311, guid: d1cbde8305f16b8448c6556c87db24ca,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 6396192009682396311, guid: d1cbde8305f16b8448c6556c87db24ca,
+        type: 3}
+      propertyPath: velocityCheckR
+      value: 
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1cbde8305f16b8448c6556c87db24ca, type: 3}
 --- !u!4 &1273106554 stripped
@@ -5522,7 +5910,7 @@ PrefabInstance:
     - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6407328193027251737, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
@@ -5557,6 +5945,21 @@ PrefabInstance:
     - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 6405476083228510776, guid: d731e0344dec6414bbfe92c6f31bb6b1,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -5743,7 +6146,7 @@ PrefabInstance:
     - target: {fileID: 356776372436596997, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 356776372436596997, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
@@ -5768,6 +6171,21 @@ PrefabInstance:
     - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 356776370833596096, guid: 315dff9ed60d72c489d50a0ee754a404,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -5967,91 +6385,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1359590986}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1359806586
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2069411082}
-    m_Modifications:
-    - target: {fileID: 8524633318919842489, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_Name
-      value: building_4 (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.165457
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: velocityCheck1
-      value: 
-      objectReference: {fileID: 532076436}
-    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-        type: 3}
-      propertyPath: velocityCheck2
-      value: 
-      objectReference: {fileID: 1727073878}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab, type: 3}
---- !u!4 &1359806587 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
-    type: 3}
-  m_PrefabInstance: {fileID: 1359806586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1374290042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6147,6 +6480,7 @@ RectTransform:
   m_Children:
   - {fileID: 2016056746}
   - {fileID: 765180989}
+  - {fileID: 940502996}
   m_Father: {fileID: 239723363}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6290,6 +6624,21 @@ PrefabInstance:
     - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -6476,7 +6825,7 @@ PrefabInstance:
     - target: {fileID: 5410886100784720631, guid: 38d1b7120f036094491ca3910a5721b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5410886100784720631, guid: 38d1b7120f036094491ca3910a5721b3,
         type: 3}
@@ -6501,6 +6850,21 @@ PrefabInstance:
     - target: {fileID: 5410886100784268070, guid: 38d1b7120f036094491ca3910a5721b3,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 5410886100784268070, guid: 38d1b7120f036094491ca3910a5721b3,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410886100784268070, guid: 38d1b7120f036094491ca3910a5721b3,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 5410886100784268070, guid: 38d1b7120f036094491ca3910a5721b3,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -6561,7 +6925,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -6591,6 +6955,21 @@ PrefabInstance:
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -6900,7 +7279,7 @@ PrefabInstance:
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8524633318919537057, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
@@ -6925,6 +7304,21 @@ PrefabInstance:
     - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8524633319259560475, guid: 87d8f21cd32c8cc4c8fbbc357aa06aab,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -6983,8 +7377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 532076436}
-  velocityCheck2: {fileID: 1727073878}
+  hapticAction:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  velocityCheckL: {fileID: 0}
+  velocityCheckR: {fileID: 0}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -7121,8 +7518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -1}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!114 &1630044601
 MonoBehaviour:
@@ -7143,12 +7540,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 48
-    m_FontStyle: 3
+    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    m_FontSize: 64
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 48
+    m_MaxSize: 64
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -7257,6 +7654,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1637263479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5606842961461800951, guid: 7b8edb3c531581b458f26cd68e5c5bac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1243673640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1638655082
 GameObject:
   m_ObjectHideFlags: 0
@@ -7284,8 +7687,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 932501121}
-  - {fileID: 2108187306}
+  - {fileID: 2063273141}
+  - {fileID: 437620810}
   m_Father: {fileID: 863027358}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7316,8 +7719,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646441775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0030769294, y: 0.4987508, z: -0.38000107}
-  m_LocalScale: {x: 1, y: 0.0625, z: 2}
+  m_LocalPosition: {x: 0.01492, y: 0.5, z: -0.38000107}
+  m_LocalScale: {x: 0.97016, y: 0.0625, z: 2}
   m_Children: []
   m_Father: {fileID: 239723363}
   m_RootOrder: 3
@@ -7431,7 +7834,7 @@ PrefabInstance:
     - target: {fileID: 7333005804405623409, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7333005804405623409, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
@@ -7456,6 +7859,21 @@ PrefabInstance:
     - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -8282,8 +8700,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841245683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.48230767, y: 0.0012505054, z: -0.38000107}
-  m_LocalScale: {x: 0.03846154, y: 1.0625, z: 2}
+  m_LocalPosition: {x: 0.48230767, y: 0.01638, z: -0.38000107}
+  m_LocalScale: {x: 0.03846154, y: 1.0294048, z: 2}
   m_Children: []
   m_Father: {fileID: 239723363}
   m_RootOrder: 2
@@ -8920,7 +9338,7 @@ PrefabInstance:
     - target: {fileID: 1943550861183018145, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1943550861183018145, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
@@ -8950,6 +9368,21 @@ PrefabInstance:
     - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 1943550859770558539, guid: 661a485f751541d49bc7c465bb8d7386,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -9074,7 +9507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 2, y: -1}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!114 &2016056748
 MonoBehaviour:
@@ -9095,9 +9528,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
     m_FontSize: 100
-    m_FontStyle: 3
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 128
@@ -9203,6 +9636,21 @@ PrefabInstance:
       propertyPath: velocityCheck2
       value: 
       objectReference: {fileID: 1727073878}
+    - target: {fileID: 280595387078061169, guid: 03f1f26403f1e02429c9419162c5b4c5,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 280595387078061169, guid: 03f1f26403f1e02429c9419162c5b4c5,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 280595387078061169, guid: 03f1f26403f1e02429c9419162c5b4c5,
+        type: 3}
+      propertyPath: velocityCheckR
+      value: 
+      objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f1f26403f1e02429c9419162c5b4c5, type: 3}
 --- !u!4 &2031676982 stripped
@@ -9274,6 +9722,98 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2040430830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2063273140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063273141}
+  - component: {fileID: 2063273144}
+  - component: {fileID: 2063273143}
+  - component: {fileID: 2063273142}
+  m_Layer: 0
+  m_Name: Cube (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2063273141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063273140}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: -0.7292, z: -0.38000107}
+  m_LocalScale: {x: 0.06923077, y: 0.51655495, z: 1.8000001}
+  m_Children: []
+  m_Father: {fileID: 1638655083}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2063273142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063273140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2063273143
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063273140}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f7d8c0abc21b5da4791d4f37ad562036, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2063273144
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063273140}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2063703159
 GameObject:
   m_ObjectHideFlags: 0
@@ -9406,7 +9946,6 @@ Transform:
   - {fileID: 1075491163}
   - {fileID: 1273106554}
   - {fileID: 1418437557}
-  - {fileID: 1359806587}
   - {fileID: 1285008624}
   - {fileID: 2007102579}
   - {fileID: 663141718}
@@ -9414,7 +9953,6 @@ Transform:
   - {fileID: 849300287}
   - {fileID: 1656805963}
   - {fileID: 1321277416}
-  - {fileID: 1232534200}
   - {fileID: 1509655196}
   - {fileID: 183093776}
   - {fileID: 664691217}
@@ -9426,6 +9964,7 @@ Transform:
   - {fileID: 1571714680}
   - {fileID: 374434700}
   - {fileID: 835182104}
+  - {fileID: 371676463}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9588,7 +10127,7 @@ PrefabInstance:
     - target: {fileID: 7333005804405623409, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7333005804405623409, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
@@ -9623,6 +10162,21 @@ PrefabInstance:
     - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 7335122287172526601, guid: f735608373b26a14e84ff396aab097ee,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []
@@ -9708,6 +10262,21 @@ PrefabInstance:
     - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
         type: 3}
       propertyPath: velocityCheck2
+      value: 
+      objectReference: {fileID: 1727073878}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: hapticAction.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckL
+      value: 
+      objectReference: {fileID: 532076436}
+    - target: {fileID: 8269419394225837606, guid: e18c4f979ade96b47a5609816acfcdbd,
+        type: 3}
+      propertyPath: velocityCheckR
       value: 
       objectReference: {fileID: 1727073878}
     m_RemovedComponents: []

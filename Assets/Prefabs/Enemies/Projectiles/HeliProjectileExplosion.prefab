@@ -9345,7 +9345,7 @@ GameObject:
   - component: {fileID: 1010961578451317600}
   - component: {fileID: -2138325807849193938}
   m_Layer: 0
-  m_Name: ProjectileExplosion
+  m_Name: HeliProjectileExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14168,7 +14168,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
