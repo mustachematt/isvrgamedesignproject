@@ -88,6 +88,10 @@ public class HelicopterMovement : MonoBehaviour
 
             transform.LookAt(player);
 
+            transform.eulerAngles = new Vector3(Mathf.Clamp(transform.eulerAngles.x, -30, 30),
+                                                  transform.eulerAngles.y,
+                                                  0);
+
             if ((Vector3.Distance(player.position, transform.position) > playerRadius))
             {
                 toggleAttack(0);
@@ -113,6 +117,10 @@ public class HelicopterMovement : MonoBehaviour
             nav.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
 
             transform.LookAt(player);
+
+            transform.eulerAngles = new Vector3(Mathf.Clamp(transform.eulerAngles.x, -30, 30),
+                                      transform.eulerAngles.y,
+                                      0);
 
             if ((Vector3.Distance(player.position, transform.position) < playerRadius))
             {

@@ -13,6 +13,8 @@ public class TankDamage : MonoBehaviour
     {
         if (transform.parent.tag == "tankBulletSpawner")
             tankParent = transform.parent.GetComponent<BulletSpawner>();
+
+        transform.parent = null;
     }
 
     void OnTriggerEnter(Collider other)
