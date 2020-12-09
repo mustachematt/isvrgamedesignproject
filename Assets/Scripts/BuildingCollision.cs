@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class BuildingCollision : MonoBehaviour
 {
-    public Velocity velocityCheck1;
-    public Velocity velocityCheck2;
+    public SteamVR_Action_Vibration hapticAction;
+
+    public Velocity velocityCheckL;
+    public Velocity velocityCheckR;
 
     public GameObject rubbleEffect;
     public GameObject fireEffect;
@@ -78,7 +81,7 @@ public class BuildingCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if ((other.tag == "hand" && (velocityCheck1.speed >= 4 || velocityCheck2.speed >= 4)) || other.tag == "explosion")
+        if ((other.tag == "hand" && (velocityCheckL.speed >= 4 || velocityCheckR.speed >= 4)) || other.tag == "explosion")
         {
             if (gameObject.tag == "skyscraper" || gameObject.tag == "building" || gameObject.tag ==  "radioTower" || gameObject.tag == "militaryBase")
             {
@@ -89,6 +92,12 @@ public class BuildingCollision : MonoBehaviour
             {
                 HouseDestroy();
             }
+
+            // haptic feedback for punching hand
+            if (velocityCheckL.speed >= 4)
+                hapticAction.Execute(0, 0.25f, 100, 80, SteamVR_Input_Sources.LeftHand);
+            else
+                hapticAction.Execute(0, 0.25f, 100, 80, SteamVR_Input_Sources.RightHand);
         }
     }
 

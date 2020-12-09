@@ -127,6 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   tankParent: {fileID: 0}
+  hapticAction:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
 --- !u!114 &3787373565532147207
 MonoBehaviour:
   m_ObjectHideFlags: 0
