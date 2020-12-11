@@ -166,6 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c556f1a63c129624d9fbf313a9f0e248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hapticAction:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
   velocityCheck1: {fileID: 0}
   velocityCheck2: {fileID: 0}
   explosionEffect: {fileID: 422661824320796535, guid: 0b417c02052f8834d9434b21e3d9deec,

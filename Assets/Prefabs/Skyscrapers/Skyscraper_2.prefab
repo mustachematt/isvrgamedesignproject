@@ -126,8 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44535833afaddef4cb9ea11bdb4d185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityCheck1: {fileID: 0}
-  velocityCheck2: {fileID: 0}
+  hapticAction:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  velocityCheckL: {fileID: 0}
+  velocityCheckR: {fileID: 0}
   rubbleEffect: {fileID: 1944489552365063757, guid: 4c78b9084333b114585bee39b11e72ae,
     type: 3}
   fireEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}

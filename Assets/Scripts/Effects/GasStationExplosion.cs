@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class GasStationExplosion : MonoBehaviour
 {
+    public SteamVR_Action_Vibration hapticAction;
+
     public Velocity velocityCheck1;
     public Velocity velocityCheck2;
 

@@ -33,16 +33,18 @@ public class TurretBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(player);
+
+        float xVal = Mathf.Clamp(transform.eulerAngles.x, 0, 25);
+        transform.eulerAngles = new Vector3(
+            xVal,
+            transform.eulerAngles.y,
+            0
+        );
+
         if (shoot)
         {
-
-            transform.LookAt(player);
-
-            transform.eulerAngles = new Vector3(Mathf.Clamp(transform.eulerAngles.x, -30, 0),
-                                      transform.eulerAngles.y,
-                                      0);
-
-            if ((Vector3.Distance(player.position, transform.position) > playerRadius))
+            if (Vector3.Distance(player.position, transform.position) > playerRadius)
             {
                 shoot = !shoot;
             }
@@ -62,13 +64,7 @@ public class TurretBehavior : MonoBehaviour
 
         else
         {
-            transform.LookAt(player);
-
-            transform.eulerAngles = new Vector3(Mathf.Clamp(transform.eulerAngles.x, -30, 0),
-                          transform.eulerAngles.y,
-                          0);
-
-            if ((Vector3.Distance(player.position, transform.position) < playerRadius))
+            if (Vector3.Distance(player.position, transform.position) < playerRadius)
             {
                 shoot = !shoot;
             }

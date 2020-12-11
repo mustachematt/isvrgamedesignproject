@@ -116,8 +116,12 @@ public class TankMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (gameObject.GetComponent<TankMovement>().enabled == false)
+            return;
+
         if ((other.tag == "hand" && (leftHandVelocity.speed >= 4 || rightHandVelocity.speed >= 4)) || other.tag == "explosion")
         {
+            Debug.Log("hand collision");
             tankDestroyed();
         }
     }

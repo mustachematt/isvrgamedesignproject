@@ -129,28 +129,28 @@ public class GlobalCounterScript : MonoBehaviour
         }
         else if(currentDifficulty == 1)
         {
-            winPercent = 0.6f;
+            winPercent = 0.4f;
             timerStartMinutes = 30;
             tankCounter = maxTankEasy;
             helicopterCounter = maxHeliEasy;
         }
         else if (currentDifficulty == 3)
         {
-            winPercent = 0.8f;
+            winPercent = 0.6f;
             timerStartMinutes = 20;
             tankCounter = maxTankHard;
             helicopterCounter = maxHeliHard;
         }
         else if (currentDifficulty == 4)
         {
-            winPercent = 0.8f;
-            timerStartMinutes = 15;
+            winPercent = 0.7f;
+            timerStartMinutes = 20;
             tankCounter = maxTankHard;
             helicopterCounter = maxHeliHard;
         }
         else   //normal mode
         {
-            winPercent = 0.7f;
+            winPercent = 0.5f;
             timerStartMinutes = 20;
             tankCounter = maxTankNormal;
             helicopterCounter = maxHeliNormal;
@@ -299,11 +299,11 @@ public class GlobalCounterScript : MonoBehaviour
             wonText2Back.SetActive(true);
             if(currentDifficulty == 3)
             {
-                PlayerPrefs.SetInt("beatnormal", 1);
-                PlayerPrefs.SetInt("beathard", 1);
+                PlayerPrefs.SetInt("beatNormal", 1);
+                PlayerPrefs.SetInt("beatHard", 1);
             }
             else if(currentDifficulty == 2)
-                PlayerPrefs.SetInt("beatnormal", 1);
+                PlayerPrefs.SetInt("beatNormal", 1);
             //stuff that happens when you win
             //------------------------
             //------------------------
