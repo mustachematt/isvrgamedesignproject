@@ -93,11 +93,14 @@ public class BuildingCollision : MonoBehaviour
                 HouseDestroy();
             }
 
-            // haptic feedback for punching hand
-            if (velocityCheckL.speed >= 4)
-                hapticAction.Execute(0, 0.25f, 100, 80, SteamVR_Input_Sources.LeftHand);
-            else
-                hapticAction.Execute(0, 0.25f, 100, 80, SteamVR_Input_Sources.RightHand);
+            if (other.tag == "hand")
+            {
+                // haptic feedback for punching hand
+                if (velocityCheckL.speed >= 4)
+                    hapticAction.Execute(0, 0.25f, 100, 1, SteamVR_Input_Sources.LeftHand);
+                else if (velocityCheckR.speed >= 4)
+                    hapticAction.Execute(0, 0.25f, 100, 1, SteamVR_Input_Sources.RightHand);
+            }
         }
     }
 

@@ -430,7 +430,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 1
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!114 &6429001953499168828
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37aafa45ac8d40649aa88a7a83ec0467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: 6
+  heal: 15
 --- !u!82 &4909900480544770653
 AudioSource:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 116
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 100
   Pan2D: 0

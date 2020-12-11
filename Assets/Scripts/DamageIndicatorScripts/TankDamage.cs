@@ -19,6 +19,9 @@ public class TankDamage : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (tankParent == null)
+            return;
+
         if (other.gameObject.tag == "body")
         {
             GameObject.Find("GlobalCounter").GetComponent<GlobalCounterScript>().TakeDamage(damage);
